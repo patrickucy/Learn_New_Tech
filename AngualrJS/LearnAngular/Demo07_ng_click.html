@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" ng-app>
+<html lang="en" ng-app="">
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
@@ -13,11 +13,19 @@
 
 <body class="container">
 
+
 <header class="page-header"><h1>Demo07</h1></header>
 
 <div ng-controller="ctrl">
 
-    
+    <ul class="list-group">
+        <li class="list-group-item" ng-repeat="b in books">
+            <span class="glyphicon glyphicon-bookmark"></span>
+            <span data-price="{{b.price}}" ng-click="showPrice($event)">{{b.title}}</span>
+            <span data-id="{{b.id}}" ng-click="hideFunc($event)" style="cursor: pointer;" class="pull-right glyphicon glyphicon-remove"></span>
+        </li>
+    </ul>
+
 </div>
 
 
@@ -25,17 +33,22 @@
 
 
 <script>
-    function ctrl($scope, $element) {
-        $scope.changeFunc = function (msg) {
-            var reg = /patrick/g
-            console.log(msg);
-            $("#label").html(msg.replace(reg, "***HelloWorld***")); // put msg to "#label" html
-        };
+    function ctrl($scope, $http) {
+        $http.get("json/books.json").success(function (r) {
+            $scope.books = r;
+            console.log(r);
 
 
-        $scope.clickFunc = function(object) {
-            $("h1").html($("#label").html());
-        }
+            $scope.hideFunc = function (event) {
+                alert("Deleting book with ID: ["+ $(event.target).attr("data-id")+"]");
+                $(event.target).parent().hide(250);
+            }
+
+            $scope.showPrice = function(event){
+                var v = $(event.target).attr("data-price");
+                console.log(v);
+            }
+        });
     }
 </script>
 

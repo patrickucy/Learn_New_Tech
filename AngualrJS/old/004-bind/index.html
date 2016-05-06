@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Controller</title>
+</head>
+<body>
+
+    <div ng-app="">
+
+        <input type="text" ng-model="test">
+        {{test}}
+
+
+        <div ng-controller="firstController">
+            <input type="text" ng-model="name" value="" >
+            <!-- this is the view layer-->
+
+            <br>
+            <input type="text" ng-model="age" value="" >
+
+            <div ng-bind="name"></div>
+            <div ng-bind="age"></div>
+        </div>
+    </div>
+
+    <script>
+        alert(3);
+    </script>
+
+</body>
+
+<script type="text/javascript" src="../vendor/angularjs/angular.js"></script>
+<script>
+    var firstController = function($scope){
+        $scope.name = 'zhangsan';
+        $scope.age = 28;
+    }
+</script>
+
+</html>

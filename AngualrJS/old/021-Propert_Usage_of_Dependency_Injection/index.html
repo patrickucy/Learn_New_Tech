@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Controller</title>
+</head>
+
+<body>
+
+<div ng-app="myApp">
+    <div ng-controller="firstController">
+
+        <ul>
+            <li ng-repeat="user in data">
+                {{user.name}}
+                {{user.age}}
+                {{user.city}}
+            </li>
+        </ul>
+
+
+    </div>
+
+
+</div>
+
+
+<div ng-controller="otherController">
+    hello this is otherController
+</div>
+
+
+</body>
+<script type="text/javascript" src="../vendor/angularjs/angular.js"></script>
+
+<script>
+    var myApp = angular.module('myApp', [], function () {
+
+
+    });
+
+    myApp.factory('CustomService', function($window){
+       console.log($window); // this is how we separate business logic from view logic
+    });
+
+    // implicit dependency injection
+    // in my view we just use this one
+    myApp.controller('firstController', function ($scope, CustomService) {
+        console.log(CustomService)
+    });
+
+
+
+    // explicit dependency injection
+    // this is another approach to use scope, here a is $scope, b is filter
+    myApp.controller('secondController', ['$scope', '$filter', function (a, b) {
+        console.log(a);
+        console.log(b('json'));
+    }])
+
+
+    function otherController(a){
+        console.log(a)
+    }
+
+    // inject parameter to this function
+    otherController.$inject = ['$scope']
+</script>
+
+
+</html>

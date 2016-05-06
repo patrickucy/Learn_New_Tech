@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Controller</title>
+</head>
+
+<body>
+
+<div ng-app="myApp">
+    <div ng-controller="firstController">
+        {{name}}
+    </div>
+
+</div>
+
+
+</body>
+<script type="text/javascript" src="../vendor/angularjs/angular.js"></script>
+
+<script>
+    var myApp = angular.module('myApp', [], function($provide){
+        // 自定义服务
+        $provide.provider('CustomService', function(){
+            this.$get = function(){}
+            return {
+                message : 'Customer Message'
+            }
+        });
+
+
+        $provide.provider('CustomService2', function(){
+            this.$get = function(){}
+            return {
+                message : 'Customer2 Message'
+            }
+        });
+
+
+
+
+    }); // 这个function是木块的配置
+
+    myApp.controller('firstController', function ($scope, CustomService, CustomService2 ) {
+        $scope.name = 'zhangsan';
+
+        console.log(CustomService);
+        console.log(CustomService2);
+
+    });
+
+</script>
+
+
+</html>

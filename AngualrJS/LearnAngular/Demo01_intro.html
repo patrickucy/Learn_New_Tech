@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" ng-app>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+          integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-2.2.3.min.js"
+            integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo=" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.29/angular.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
+            integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
+            crossorigin="anonymous"></script>
+
+    <title>Demo01</title>
+</head>
+
+
+
+<body class="container">
+
+<header class="page-header"><h1>Demo01</h1></header>
+
+<div ng-controller="test">
+    <div>Hello</div>
+    <div>
+        <input type="text" ng-model="name"> <br>
+        {{name}}
+    </div>
+    <div>
+        <span ng-bind="info.title"></span>
+        <span ng-bind="info.price"></span>
+    </div>
+</div>
+
+
+</body>
+
+
+<script>
+    function test($scope, $element){ // 这个就是写死的, $element 就是那个div DOM元素
+        var e = $element.children().eq(0); // 找第0个children, 这里是一个jquery对象
+        alert(e.html());
+        $scope.name = 'test';
+        $scope.info = {title: "angularjs", price : 10};
+    }
+</script>
+
+</html>

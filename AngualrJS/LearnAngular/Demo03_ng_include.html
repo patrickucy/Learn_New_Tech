@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" ng-app>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+          integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-2.2.3.min.js"
+            integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo=" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.29/angular.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
+            integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
+            crossorigin="anonymous"></script>
+
+    <title>Demo03</title>
+</head>
+
+
+<body class="container">
+<div ng-include="'help/_header.html'"></div>
+<header class="page-header"><h1>Demo03</h1></header>
+
+
+<!--<div ng-init="url='help/about.html'"></div>
+    一开始的demo 是用这个来做的, 现在的做法是用controller来做
+     <ul class="nav nav-pills">
+        <li class="active"><a ng-click="url='help/about.html'" data-toggle="tab" href="#">About</a></li>
+        <li><a ng-click="url='help/email.html'" data-toggle="tab" href="#">Email</a></li>
+        <li><a ng-click="url='help/profile.html'" data-toggle="tab" href="#">Profile</a></li>
+    </ul>
+    <div ng-include="url" class="focus"></div>
+-->
+
+<div ng-controller="menuCtrl">
+    <ul class="nav nav-pills">
+        <li ng-repeat="m in menus">
+            <!--这里不允许传$event.target了-->
+            <a data-url="{{ m.url }}" ng-click="changeTab($event)" href="" data-toggle="tab">{{m.title}}</a>
+        </li>
+    </ul>
+    <div ng-include="url" class="focus"></div>
+
+</div>
+
+
+</body>
+
+
+<script>
+    function menuCtrl($scope, $element, $http) { // 这个就是写死的, $element 就是那个div DOM元素
+        $http.get("json/menu.json").success(function (result) {
+            $scope.menus = result;
+            $scope.url = result[0].url;
+        });
+
+        $scope.changeTab = function (event) {
+            $scope.url =  $(event.target).attr("data-url");
+        }
+    }
+
+
+</script>
+
+</html>

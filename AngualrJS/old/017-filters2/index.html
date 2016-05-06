@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Controller</title>
+</head>
+
+<body>
+
+<div ng-app="myApp">
+    <div ng-controller="firstController">
+
+        {{[1,2,3,4,5,6,7,8,9] | limitTo: 3}} <br>
+
+        {{[1,2,3,4,5,6,7,8,9] | limitTo: -3}} <br>
+
+        {{Data.message | lowercase}} <br>
+
+        {{Data.message | uppercase}} <br>
+
+        {{Data.message | uppercase}} <br>
+
+        {{Data.city}} <br>
+
+        {{Data.city | filter: '上海'}} <br>  <!-- 只要包含, 就能匹配value成功, 不会匹配key-->
+
+        {{Data.city | filter: {py:'h'} }} <br> <!-- 只要包含对象里面的情况, 就能匹配value成功, 不会匹配key -->
+
+
+        {{Data.city | orderBy: 'py'}} <br>
+        {{Data.city | orderBy: '-py'}} descending order <br>
+
+        {{Data.city | orderBy: '-py'}} descending order <br>
+
+
+        {{Data.city | filter: checkName}} custom filter <br>
+
+    </div>
+
+
+</div>
+
+
+</body>
+<script type="text/javascript" src="../vendor/angularjs/angular.js"></script>
+
+<script>
+    var myApp = angular.module('myApp', [])
+            .factory('Data', function () {
+                return {
+                    message: 'Shared Data',
+                    city: [
+                        {name : '上海',
+                            py : 'shanghai'
+                        },{name : '北京',
+                            py : 'beijing'
+                        },{name : '广州',
+                            py : 'guangzhou'
+                        }
+                    ]
+                }
+            })
+            .controller('firstController', function ($scope, Data, $filter) {
+                $scope.today = new Date();
+
+                // #3 通过绑定服务方法来共享数据
+                $scope.Data = Data;
+
+                // 控制器中用过滤器
+                var number =  $filter('number')(3000);
+                var jsonString = $filter('json')($scope.data); // 实际上是为了方便调试用的,
+
+                $scope.checkName = function(obj){
+                    if (obj.py.indexOf('h') == -1){
+                        return false;
+                    }
+                    return true;
+                };
+            });
+
+</script>
+
+
+</html>

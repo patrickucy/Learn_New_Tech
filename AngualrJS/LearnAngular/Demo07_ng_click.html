@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" ng-app>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+    <script src="lib/jquery.js"></script>
+    <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+    <script src="lib/angular.min.js"></script>
+
+    <title>Demo07</title>
+</head>
+
+
+<body class="container">
+
+<header class="page-header"><h1>Demo07</h1></header>
+
+<div ng-controller="ctrl">
+
+    
+</div>
+
+
+</body>
+
+
+<script>
+    function ctrl($scope, $element) {
+        $scope.changeFunc = function (msg) {
+            var reg = /patrick/g
+            console.log(msg);
+            $("#label").html(msg.replace(reg, "***HelloWorld***")); // put msg to "#label" html
+        };
+
+
+        $scope.clickFunc = function(object) {
+            $("h1").html($("#label").html());
+        }
+    }
+</script>
+
+</html>

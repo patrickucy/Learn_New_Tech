@@ -1,2 +1,2 @@
-# learn_new_ech
+# learn_new_tech
 Learning New Technology Repository for Patrick Yu

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+    <script src="lib/jquery.js"></script>
+    <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+    <script src="lib/angular.min.js"></script>
+
+    <title>Demo09</title>
+</head>
+
+
+<body class="container">
+
+
+<header class="page-header"><h1>Demo09</h1></header>
+
+<div ng-controller="ctrl">
+
+    <div>
+        <form id="frmLogin" name="frmLogin" action="Demo07_ng_click.html">
+            <div class="form-group has-feedback"
+                 data-ng-class="frmLogin.userName.$dirty ? (frmLogin.userName.$valid ? 'has-success' : 'has-error') : ''">
+
+                <label class="control-label" for="userName">Username</label>
+                <input required class="form-control" type="text" id="userName" data-ng-minlength="3">
+                <span data-ng-class="'glyphicon-ok'" ng-show="frmLogin.userName.$dirty && frmLogin.userName.valid"
+                      class="glyphicon glyphicon-ok form-control-feedback"></span>
+                <span data-ng-class="'glyphicon-remove'" ng-show="frmLogin.userName.$dirty && frmLogin.userName.invalid"
+                      class="glyphicon glyphicon-remove form-control-feedback"></span>
+
+            </div>
+            <div class="form-group has-feedback"
+                 data-ng-class="frmLogin.email.$dirty ? (frmLogin.email.$valid ? 'has-success' : 'has-error') : ''">
+
+                <label class="control-label" for="email">Email</label>
+                <input required class="form-control" type="email" id="email">
+                <span class="glyphicon glyphicon-ok form-control-feedback"
+                      ng-show="frmLogin.email.$dirty && frmLogin.email.valid"></span>
+                <span class="glyphicon glyphicon-remove form-control-feedback"
+                      ng-show="frmLogin.email.$dirty && frmLogin.email.valid"></span>
+
+            </div>
+            <p class="text-right">
+                <button data-ng-disable="frmLogin.$invalid" type="submit" class="btn btn-primary">Login</button>
+            </p>
+        </form>
+    </div>
+</div>
+
+
+</body>
+
+
+<script>
+    function ctrl($scope, $http) {
+        $http.get("json/nums.json").success(function (array) {
+            $scope.nums = array;
+        });
+
+
+        $scope.mouseEnter = function (event) {
+            $(event.target).addClass("img-thumbnail");
+        };
+
+        $scope.mouseLeave = function (event) {
+            $(event.target).removeClass("img-thumbnail");
+
+        };
+    }
+</script>
+
+</html>

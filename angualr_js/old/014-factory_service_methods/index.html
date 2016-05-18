@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Controller</title>
+</head>
+
+<body>
+
+<div ng-app="myApp">
+    <div ng-controller="firstController">
+        {{name}}
+    </div>
+
+</div>
+
+
+</body>
+<script type="text/javascript" src="../vendor/angularjs/angular.js"></script>
+
+<script>
+    var myApp = angular.module('myApp', [], function ($provide) {
+        // 自定义工厂
+        $provide.provider('CustomService', function () {
+            this.$get = function () {
+                return {
+                    message: 'Customer Message'
+                }
+            }
+
+        });
+
+        $provide.factory('CustomService2', function () {
+            return [1, 2, 3, 4, 5, 6, 7];
+        });
+
+        // 自定义服务
+        $provide.service('CustomService3', function () {
+            return ['shanghai']; // 必须是引用类型的
+        });
+
+
+    });
+
+    myApp.controller('firstController', function ($scope, CustomService, CustomService2, CustomService3) {
+        $scope.name = 'zhangsan';
+
+        console.log(CustomService);
+        console.log(CustomService2);
+        console.log(CustomService3);
+
+
+    });
+
+    // 更上面的作用是一模一样的,
+    myApp.factory();
+    myApp.serivce();
+</script>
+
+
+</html>

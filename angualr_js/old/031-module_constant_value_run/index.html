@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Controller</title>
+</head>
+
+<body>
+
+<div ng-app="myApp">
+
+    <div ng-controller="firstController">
+
+    </div>
+</div>
+
+
+</body>
+<script type="text/javascript" src="../vendor/angularjs/angular.js"></script>
+
+<script>
+    var myApp = angular.module('myApp', [], ['$provide', function($provide){
+//        $provide.factory
+//        $provide.service
+//        $provide.constant
+//        $provide.value;
+
+    }]);
+
+//  inject anything
+    myApp.constant('CON', 'xxxx');
+
+    // only inject controller, service,  factory
+    myApp.value('version', '1.0.0');
+
+    // config 之后 controller 等其他服务之前
+    myApp.run(function(){
+        console.log('run');
+    });
+    myApp.config(function(CON){
+       console.log(CON);
+    });
+
+    myApp.controller('firstController',['CON', function ($scope) {
+        console.log(CON);
+    }]);
+
+
+
+
+
+</script>
+
+
+</html>

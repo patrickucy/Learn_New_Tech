@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../vendor/bootstrap/css/bootstrap.min.css">
+    <title>Shopping Cart</title>
+</head>
+<body ng-app>
+
+<div class="container" ng-controller="cartController">
+    <table class="table" ng-show="cart.length">
+        <thead>
+        <tr>
+            <th>Product #</th>
+            <th>Product name</th>
+            <th>Quantity</th>
+            <th>Price</th>
+            <th>Total Price</th>
+            <th>Operation</th>
+
+        </tr>
+
+        </thead>
+        <tbody>
+        <tr ng-repeat="item in cart">
+            <td>{{item.id}}</td>
+            <td>{{item.name}}</td>
+            <td>
+                <button type="button" class="btn btn-primary" ng-click="reduce(item.id)">-</button>
+                <input type="text" value="{{item.quantity}}" ng-model="item.quantity">
+
+                <button type="button" class="btn btn-primary" ng-click="add(item.id)">+</button>
+
+            </td>
+            <td>{{item.price}}</td>
+            <td>{{item.price * item.quantity}}</td>
+            <td>
+                <button type="button" class="btn btn-danger" ng-click="removeItem(item.id)">Remove</button>
+            </td>
+        </tr>
+        <tr>
+            <td>Total Price:</td>
+            <td>{{totalPrice()}}</td>
+            <td>Total Quantity:</td>
+            <td>{{totalQuantity()}}</td>
+            <td colspan="2">
+                <button type="button" class="btn btn-danger" ng-click="cart = {} ">Remove All Items</button>
+            </td>
+        </tr>
+        </tbody>
+
+    </table>
+
+    <p ng-show="!cart.length">Your shopping cart is empty</p>
+</div>
+
+</body>
+<script type="text/javascript" src="../vendor/angularjs/angular.js"></script>
+
+<script>
+    var cartController = function ($scope) {
+        $scope.cart = [
+            {
+                id: 1000,
+                name: 'iphone 5s',
+                quantity: 3,
+                price: 4300
+            },
+            {
+                id: 1001,
+                name: 'iphone 6',
+                quantity: 6,
+                price: 5300
+            },
+            {
+                id: 1002,
+                name: 'macbook air',
+                quantity: 1,
+                price: 9000
+            },
+            {
+                id: 10003,
+                name: 'ipad',
+                quantity: 10,
+                price: 3500
+            }
+        ];
+
+        /**
+         * 计算总价
+         */
+        $scope.totalPrice = function () {
+            var totalPrice = 0;
+            angular.forEach($scope.cart, function (item) {
+                totalPrice += item.quantity * item.price;
+            });
+            return totalPrice;
+        };
+
+        /**
+         * 计算总数
+         */
+        $scope.totalQuantity = function () {
+            var totalQuantity = 0;
+            angular.forEach($scope.cart, function (item) {
+                totalQuantity += parseInt(item.quantity);
+            });
+            return totalQuantity;
+        };
+
+
+        $scope.removeItem = function (id) {
+            var index = findIndex(id);
+
+            // 一旦找到, 理论上是不可能找不到的
+            if (index != -1) {
+                $scope.cart.splice(index, 1);
+            }
+            // 自动执行脏检查
+        }
+
+
+        var findIndex = function (id) {
+            var index = -1;
+            angular.forEach($scope.cart, function (item, key) {
+                if (item.id == id) {
+                    index = key;
+                    return; // 实际上是个break这里
+                }
+            });
+            return index;
+        }
+
+        /**
+         *  添加,移除某个产品的数量
+         */
+        $scope.add = function (id) {
+            var index = findIndex(id);
+            if (index != -1) {
+                ++$scope.cart[index].quantity;
+            }
+        }
+        $scope.reduce = function (id) {
+            var index = findIndex(id);
+            if (index != -1) {
+                var item = $scope.cart[index];
+                if (item.quantity > 1) {
+                    --item.quantity;
+                } else {
+                    var returnKey = confirm('Are you sure to remove this item ?');
+                    if (returnKey){
+                        $scope.removeItem(id);
+                    }
+                }
+            }
+        }
+
+        $scope.$watch('cart', function(newVal, oldVal){
+            angular.forEach(newVal, function(item, key){
+                if(item.quantity < 1){
+                    var returnKey = confirm('Are you sure to remove this item ?');
+                    if (returnKey){
+                        $scope.removeItem(item.id);
+                    }else{
+                        item.quantity = oldVal[key].quantity;
+                    }
+                }
+            });
+
+        },true);
+
+
+    };
+
+
+</script>
+</html>

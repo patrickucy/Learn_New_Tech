@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" ng-app>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+    <script src="lib/jquery.js"></script>
+    <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+    <script src="lib/angular.min.js"></script>
+
+    <title>Demo01</title>
+</head>
+
+
+
+<body class="container">
+
+<header class="page-header"><h1>Demo01</h1></header>
+
+<div ng-controller="test">
+    <div>Hello</div>
+    <div>
+        <input type="text" ng-model="name"> <br>
+        {{name}}
+    </div>
+    <div>
+        <span ng-bind="info.title"></span>
+        <span ng-bind="info.price"></span>
+    </div>
+</div>
+
+
+</body>
+
+
+<script>
+    function test($scope, $element){ // 这个就是写死的, $element 就是那个div DOM元素
+        var e = $element.children().eq(0); // 找第0个children, 这里是一个jquery对象
+        alert(e.html());
+        $scope.name = 'test';
+        $scope.info = {title: "angularjs", price : 10};
+    }
+</script>
+
+</html>

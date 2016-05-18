@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" ng-app>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+    <script src="lib/jquery.js"></script>
+    <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+    <script src="lib/angular.min.js"></script>
+
+
+    <title>Demo05</title>
+</head>
+
+
+<body class="container">
+
+<header class="page-header"><h1>Demo05</h1></header>
+
+<div ng-controller="ctrl">
+
+    <div ng-init="flag=false">
+        <button type="button" ng-show="!flag" class="btn btn-default" ng-click="flag=!flag">Edit</button>
+        <button type="button" ng-show="flag" class="btn btn-default" ng-click="flag=!flag">Submit</button>
+
+        <div ng-hide="flag" class="jumbotron">
+            <h1>{{msg}}</h1>
+        </div>
+        <div ng-show="flag" class="jumbotron">
+            <input type="text" ng-model="msg">
+        </div>
+    </div>
+
+
+    <div ng-init="week='mon'">
+        <ul ng-switch="week">
+            <li ng-switch-when="mon">星期一</li>
+            <li ng-switch-when="tue">星期二</li>
+            <li ng-switch-when="wed">星期三</li>
+            <li ng-switch-when="thu">星期四</li>
+            <li ng-switch-when="fri">星期五</li>
+            <li ng-switch-when="sat">星期六</li>
+            <li ng-switch-when="sun">星期日</li>
+            <li ng-switch-defualt="workday"></li>
+        </ul>
+    </div>
+
+
+    <div class="row">
+
+        <div class="col-sm-4" ng-init="url='pic.png'">
+            <img alt="" class="img-responsive" src="{{url}}">
+        </div>
+
+    </div>
+</div>
+
+
+</body>
+
+
+<script>
+    function ctrl($scope, $element) {
+
+
+    }
+</script>
+
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Data binding</title>
+</head>
+<body ng-app>
+
+    <input type="text" ng-model="name" value="">
+
+    <!--angular的表达式 -->
+    {{100+100}}
+    {{name}} <!-- 跟上面的这个ng-model 是同步更新的! -->
+
+    <br> <br>
+
+    <input type="text" ng-model="name" value="">
+
+    <!--
+        view -> 121231
+        model -> 121231
+        3 个view
+         数据是双向绑定的
+         这里就是两个input 同时绑定这name 这个ng-model
+    -->
+
+
+
+
+    <script>
+        // js 表达式 -> 可以认为是个字符串, 然后用eval去解析它
+        var string = 'alert(1+2)';
+//        eval(string);
+
+        var a = 3; // 实际上是对window的属性声明了一个3
+
+    </script>
+    <script type="text/javascript" src="../vendor/angularjs/angular.js"></script>
+
+</body>
+
+</html>

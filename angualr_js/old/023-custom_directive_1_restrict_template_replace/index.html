@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Controller</title>
+</head>
+
+<body>
+
+<div ng-app="myApp">
+    <div ng-controller="firstController">
+
+        <custom-tags>1212</custom-tags>
+        <div class="custom-tags"></div>
+        <div custom-tags></div>
+        <!-- directive: custom-tags -->
+    </div>
+
+
+</div>
+
+
+</body>
+<script type="text/javascript" src="../vendor/angularjs/angular.js"></script>
+
+<script>
+    var myApp = angular.module('myApp', [], function ($compileProvider) {
+
+        $compileProvider.directive('customTags', function () {
+            return {
+                restrict: 'ECAM',
+                template: '<div>custom-tags-html</div>',
+//                compile: function () {
+//                    console.log(1);
+//                }
+                replace: false
+
+            }
+        });
+
+    });
+
+
+    myApp.controller('firstController', function ($scope) {
+    });
+
+
+    myApp.directive
+
+
+</script>
+
+
+</html>

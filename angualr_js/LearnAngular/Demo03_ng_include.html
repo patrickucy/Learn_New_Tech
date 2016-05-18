@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" ng-app>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+    <script src="lib/jquery.js"></script>
+    <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+    <script src="lib/angular.min.js"></script>
+
+    <title>Demo03</title>
+</head>
+
+
+<body class="container">
+<div ng-include="'help/_header.html'"></div>
+<header class="page-header"><h1>Demo03</h1></header>
+
+
+<!--<div ng-init="url='help/about.html'"></div>
+    一开始的demo 是用这个来做的, 现在的做法是用controller来做
+     <ul class="nav nav-pills">
+        <li class="active"><a ng-click="url='help/about.html'" data-toggle="tab" href="#">About</a></li>
+        <li><a ng-click="url='help/email.html'" data-toggle="tab" href="#">Email</a></li>
+        <li><a ng-click="url='help/profile.html'" data-toggle="tab" href="#">Profile</a></li>
+    </ul>
+    <div ng-include="url" class="focus"></div>
+-->
+
+<div ng-controller="menuCtrl">
+    <ul class="nav nav-pills">
+        <li ng-repeat="m in menus">
+            <!--这里不允许传$event.target了-->
+            <a data-url="{{ m.url }}" ng-click="changeTab($event)" href="" data-toggle="tab">{{m.title}}</a>
+        </li>
+    </ul>
+    <div ng-include="url" class="focus"></div>
+
+</div>
+
+
+</body>
+
+
+<script>
+    function menuCtrl($scope, $element, $http) { // 这个就是写死的, $element 就是那个div DOM元素
+        $http.get("json/menu.json").success(function (result) {
+            $scope.menus = result;
+            $scope.url = result[0].url;
+        });
+
+        $scope.changeTab = function (event) {
+            $scope.url =  $(event.target).attr("data-url");
+        }
+    }
+
+
+</script>
+
+</html>

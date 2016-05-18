@@ -1,0 +1,104 @@
+day09
+{AM1}
+一、回顾
+	1.	ViewController
+		1>	使用控件	C-V
+		2>	系统的ViewController
+			UITableViewController	C
+		3>	自定义的ViewController
+		4>	MVC
+			通信、原则
+	2.	View
+		1>	手势与触控事件
+		2>	2D 绘制 
+		3>	贴图 系统控件美化
+		4>	布局 
+		5>	动画特效
+二、手势
+	1.	手势是什么？
+		用户和手机交互的最简单的表达方式
+	2.	UIGestureRecognizer
+		UIView因为要负责和用户的直接交互
+		所有的UIView除了增加子view之外
+		还可以增加手势识别器
+		1.	构建
+		2.	调整
+		3.	加入
+		
+	3.	分类
+		1>	一次触发
+			Tap 		碰 	相当于鼠标点击 click
+			LongPress 	长按
+			Swipe		轻扫
+		2>	连续触发
+			Pan			拖动 drag
+			Rotation	旋转 
+			Pinch		捏	
+	4. 	Tap	
+		
+	5.	Pinch
+		scale
+	{AM2}
+	6.	Rotation
+		rotation 3.14 意思就是180度
+三、 View变形
+		transform属性
+			修改角度
+			修改位移
+			修改大小	
+	{PM1}
+二、	手势
+	7.	Pan
+	8.	手势状态 
+		Began	手势刚开始
+		Changed	手势持续
+		Ended	手势结束
+	{PM2}
+		[P20]
+		往项目里增加一张高清大图
+		1.	代码 UIImageView 加载这张高清大图
+		2*.	使用 transform 将UIImageView大小卡死
+			使用center将UIImageView移动到屏幕中央
+		3.	增加pan手势（1个手指头）
+			可以移动UIImageView用center
+		4.	增加tap手势（1个手指头按两次）
+			将UIImageView重置到屏幕中央
+		5.	增加rotation手势 支持旋转
+		6.	增加pinch手势 支持放大缩小
+			使用transform的Scale
+			由于上午练习没讲，没做出来的参照rotation
+			照猫画虎,CGAffineTransformScale实现
+	{PM3}
+		View 树状结构以及坐标系(深入)
+		self.view.frame		
+		x y w h 都是相对于父视图的坐标信息
+		这些信息会跟随transform的更改而变化
+		
+		self.view.center
+		x y 也是相对与父视图的坐标信息 
+		frame.x + frame.w / 2
+		frame.y + frame.h / 2
+		
+		self.view.bounds
+		x y w h 
+		x y 一般都是0
+		w h 是这个view真正的宽和高 
+		是这个view在子视图坐标系内的宽高
+		
+	作业
+	完成 P20
+		* UIGestureRecognizerDelegate
+		
+		
+		
+		
+		
+		
+			
+		
+		
+		
+		
+		
+		
+		

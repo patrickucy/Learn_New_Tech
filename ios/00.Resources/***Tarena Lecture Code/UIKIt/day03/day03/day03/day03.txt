@@ -1,0 +1,50 @@
+day03
+{AM1}
+一、Modal View Controller	
+	1.	显示一个新的View Controller
+		0)	构建一个新的ViewController类
+			必要时创建对应的nib文件
+		1)	初始化新viewController对象
+		2)	presentViewController:animated:completion:
+	2.	设置跳转的动画效果
+		secondViewController.modalTransitionStyle
+	3.	回到上一个ViewController
+		在第二个VC调用
+		dismissViewControllerAnimated:completion:
+二、多VC下的MVC结构
+		独立结构
+		每个用户看到的界面 大多都是一个MVC组合
+		这个界面由这个Controller进行控制
+		
+		新的界面要有新的MVC组合
+		新的界面由新的Controller进行控制
+		
+		两个界面进行跳转
+		要在controller写 打开 和 关闭的相关代码
+		
+		两个界面进行数据交互
+		主界面 -> 子界面
+			通过property的值注入
+		子界面 -> 主界面 返回
+			通过自定义委托
+三、为子界面赋值
+	1.	子界面构建显示控件
+	2.	子界面构建存放数据的property
+	3.	主界面构建子界面
+	4.	主界面为子界面的数据赋值
+	5.	主界面调用消息显示子界面
+	6.	在子界面的viewWillAppear消息内
+		根据数据更新显示控件
+{AM2}
+	[P05]
+		第一界面 有一个UITextField
+		和一个Button
+		点击按钮后
+		在第二界面的Label上显示第一个界面输入的文字
+
+			
+
+		
+	
+		
+	 

@@ -1,0 +1,308 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1884E6AE175D905A006A44E5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1884E6AD175D905A006A44E5 /* UIKit.framework */; };
+		1884E6B0175D905A006A44E5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1884E6AF175D905A006A44E5 /* Foundation.framework */; };
+		1884E6B2175D905A006A44E5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1884E6B1175D905A006A44E5 /* CoreGraphics.framework */; };
+		1884E6B8175D905B006A44E5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1884E6B6175D905B006A44E5 /* InfoPlist.strings */; };
+		1884E6BA175D905B006A44E5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1884E6B9175D905B006A44E5 /* main.m */; };
+		1884E6BE175D905B006A44E5 /* TRAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1884E6BD175D905B006A44E5 /* TRAppDelegate.m */; };
+		1884E6C0175D905B006A44E5 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 1884E6BF175D905B006A44E5 /* Default.png */; };
+		1884E6C2175D905B006A44E5 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1884E6C1175D905B006A44E5 /* Default@2x.png */; };
+		1884E6C4175D905B006A44E5 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1884E6C3175D905B006A44E5 /* Default-568h@2x.png */; };
+		1884E6C7175D905B006A44E5 /* TRViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1884E6C6175D905B006A44E5 /* TRViewController.m */; };
+		1884E6CA175D905B006A44E5 /* TRViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1884E6C8175D905B006A44E5 /* TRViewController.xib */; };
+		1884E6D3175D90E7006A44E5 /* TRBloodTypeChooseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1884E6D1175D90E7006A44E5 /* TRBloodTypeChooseViewController.m */; };
+		1884E6D4175D90E7006A44E5 /* TRBloodTypeChooseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1884E6D2175D90E7006A44E5 /* TRBloodTypeChooseViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1884E6A9175D905A006A44E5 /* Demo3_Delegation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Demo3_Delegation.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1884E6AD175D905A006A44E5 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		1884E6AF175D905A006A44E5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		1884E6B1175D905A006A44E5 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		1884E6B5175D905B006A44E5 /* Demo3_Delegation-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Demo3_Delegation-Info.plist"; sourceTree = "<group>"; };
+		1884E6B7175D905B006A44E5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1884E6B9175D905B006A44E5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		1884E6BB175D905B006A44E5 /* Demo3_Delegation-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Demo3_Delegation-Prefix.pch"; sourceTree = "<group>"; };
+		1884E6BC175D905B006A44E5 /* TRAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TRAppDelegate.h; sourceTree = "<group>"; };
+		1884E6BD175D905B006A44E5 /* TRAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TRAppDelegate.m; sourceTree = "<group>"; };
+		1884E6BF175D905B006A44E5 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		1884E6C1175D905B006A44E5 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		1884E6C3175D905B006A44E5 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		1884E6C5175D905B006A44E5 /* TRViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TRViewController.h; sourceTree = "<group>"; };
+		1884E6C6175D905B006A44E5 /* TRViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TRViewController.m; sourceTree = "<group>"; };
+		1884E6C9175D905B006A44E5 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/TRViewController.xib; sourceTree = "<group>"; };
+		1884E6D0175D90E7006A44E5 /* TRBloodTypeChooseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRBloodTypeChooseViewController.h; sourceTree = "<group>"; };
+		1884E6D1175D90E7006A44E5 /* TRBloodTypeChooseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRBloodTypeChooseViewController.m; sourceTree = "<group>"; };
+		1884E6D2175D90E7006A44E5 /* TRBloodTypeChooseViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TRBloodTypeChooseViewController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1884E6A6175D905A006A44E5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1884E6AE175D905A006A44E5 /* UIKit.framework in Frameworks */,
+				1884E6B0175D905A006A44E5 /* Foundation.framework in Frameworks */,
+				1884E6B2175D905A006A44E5 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1884E69E175D905A006A44E5 = {
+			isa = PBXGroup;
+			children = (
+				1884E6B3175D905A006A44E5 /* Demo3_Delegation */,
+				1884E6AC175D905A006A44E5 /* Frameworks */,
+				1884E6AA175D905A006A44E5 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1884E6AA175D905A006A44E5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1884E6A9175D905A006A44E5 /* Demo3_Delegation.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1884E6AC175D905A006A44E5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1884E6AD175D905A006A44E5 /* UIKit.framework */,
+				1884E6AF175D905A006A44E5 /* Foundation.framework */,
+				1884E6B1175D905A006A44E5 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1884E6B3175D905A006A44E5 /* Demo3_Delegation */ = {
+			isa = PBXGroup;
+			children = (
+				1884E6BC175D905B006A44E5 /* TRAppDelegate.h */,
+				1884E6BD175D905B006A44E5 /* TRAppDelegate.m */,
+				1884E6C5175D905B006A44E5 /* TRViewController.h */,
+				1884E6C6175D905B006A44E5 /* TRViewController.m */,
+				1884E6C8175D905B006A44E5 /* TRViewController.xib */,
+				1884E6B4175D905B006A44E5 /* Supporting Files */,
+				1884E6D0175D90E7006A44E5 /* TRBloodTypeChooseViewController.h */,
+				1884E6D1175D90E7006A44E5 /* TRBloodTypeChooseViewController.m */,
+				1884E6D2175D90E7006A44E5 /* TRBloodTypeChooseViewController.xib */,
+			);
+			path = Demo3_Delegation;
+			sourceTree = "<group>";
+		};
+		1884E6B4175D905B006A44E5 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1884E6B5175D905B006A44E5 /* Demo3_Delegation-Info.plist */,
+				1884E6B6175D905B006A44E5 /* InfoPlist.strings */,
+				1884E6B9175D905B006A44E5 /* main.m */,
+				1884E6BB175D905B006A44E5 /* Demo3_Delegation-Prefix.pch */,
+				1884E6BF175D905B006A44E5 /* Default.png */,
+				1884E6C1175D905B006A44E5 /* Default@2x.png */,
+				1884E6C3175D905B006A44E5 /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1884E6A8175D905A006A44E5 /* Demo3_Delegation */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1884E6CD175D905B006A44E5 /* Build configuration list for PBXNativeTarget "Demo3_Delegation" */;
+			buildPhases = (
+				1884E6A5175D905A006A44E5 /* Sources */,
+				1884E6A6175D905A006A44E5 /* Frameworks */,
+				1884E6A7175D905A006A44E5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Demo3_Delegation;
+			productName = Demo3_Delegation;
+			productReference = 1884E6A9175D905A006A44E5 /* Demo3_Delegation.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1884E6A0175D905A006A44E5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = TR;
+				LastUpgradeCheck = 0450;
+				ORGANIZATIONNAME = tarena;
+			};
+			buildConfigurationList = 1884E6A3175D905A006A44E5 /* Build configuration list for PBXProject "Demo3_Delegation" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 1884E69E175D905A006A44E5;
+			productRefGroup = 1884E6AA175D905A006A44E5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1884E6A8175D905A006A44E5 /* Demo3_Delegation */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1884E6A7175D905A006A44E5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1884E6B8175D905B006A44E5 /* InfoPlist.strings in Resources */,
+				1884E6C0175D905B006A44E5 /* Default.png in Resources */,
+				1884E6C2175D905B006A44E5 /* Default@2x.png in Resources */,
+				1884E6C4175D905B006A44E5 /* Default-568h@2x.png in Resources */,
+				1884E6CA175D905B006A44E5 /* TRViewController.xib in Resources */,
+				1884E6D4175D90E7006A44E5 /* TRBloodTypeChooseViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1884E6A5175D905A006A44E5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1884E6BA175D905B006A44E5 /* main.m in Sources */,
+				1884E6BE175D905B006A44E5 /* TRAppDelegate.m in Sources */,
+				1884E6C7175D905B006A44E5 /* TRViewController.m in Sources */,
+				1884E6D3175D90E7006A44E5 /* TRBloodTypeChooseViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		1884E6B6175D905B006A44E5 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1884E6B7175D905B006A44E5 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		1884E6C8175D905B006A44E5 /* TRViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1884E6C9175D905B006A44E5 /* en */,
+			);
+			name = TRViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1884E6CB175D905B006A44E5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		1884E6CC175D905B006A44E5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1884E6CE175D905B006A44E5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Demo3_Delegation/Demo3_Delegation-Prefix.pch";
+				INFOPLIST_FILE = "Demo3_Delegation/Demo3_Delegation-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		1884E6CF175D905B006A44E5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Demo3_Delegation/Demo3_Delegation-Prefix.pch";
+				INFOPLIST_FILE = "Demo3_Delegation/Demo3_Delegation-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1884E6A3175D905A006A44E5 /* Build configuration list for PBXProject "Demo3_Delegation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1884E6CB175D905B006A44E5 /* Debug */,
+				1884E6CC175D905B006A44E5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1884E6CD175D905B006A44E5 /* Build configuration list for PBXNativeTarget "Demo3_Delegation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1884E6CE175D905B006A44E5 /* Debug */,
+				1884E6CF175D905B006A44E5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1884E6A0175D905A006A44E5 /* Project object */;
+}

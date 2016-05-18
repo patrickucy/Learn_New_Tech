@@ -1,0 +1,300 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		182625EA176EA8A8002C1927 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 182625E9176EA8A8002C1927 /* UIKit.framework */; };
+		182625EC176EA8A8002C1927 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 182625EB176EA8A8002C1927 /* Foundation.framework */; };
+		182625EE176EA8A8002C1927 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 182625ED176EA8A8002C1927 /* CoreGraphics.framework */; };
+		182625F4176EA8A8002C1927 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 182625F2176EA8A8002C1927 /* InfoPlist.strings */; };
+		182625F6176EA8A8002C1927 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 182625F5176EA8A8002C1927 /* main.m */; };
+		182625FA176EA8A8002C1927 /* TRAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 182625F9176EA8A8002C1927 /* TRAppDelegate.m */; };
+		182625FC176EA8A8002C1927 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 182625FB176EA8A8002C1927 /* Default.png */; };
+		182625FE176EA8A8002C1927 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 182625FD176EA8A8002C1927 /* Default@2x.png */; };
+		18262600176EA8A8002C1927 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 182625FF176EA8A8002C1927 /* Default-568h@2x.png */; };
+		18262603176EA8A8002C1927 /* TRViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18262602176EA8A8002C1927 /* TRViewController.m */; };
+		18262606176EA8A8002C1927 /* TRViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18262604176EA8A8002C1927 /* TRViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		182625E5176EA8A8002C1927 /* Demo2_GR_Pinch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Demo2_GR_Pinch.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		182625E9176EA8A8002C1927 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		182625EB176EA8A8002C1927 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		182625ED176EA8A8002C1927 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		182625F1176EA8A8002C1927 /* Demo2_GR_Pinch-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Demo2_GR_Pinch-Info.plist"; sourceTree = "<group>"; };
+		182625F3176EA8A8002C1927 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		182625F5176EA8A8002C1927 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		182625F7176EA8A8002C1927 /* Demo2_GR_Pinch-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Demo2_GR_Pinch-Prefix.pch"; sourceTree = "<group>"; };
+		182625F8176EA8A8002C1927 /* TRAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TRAppDelegate.h; sourceTree = "<group>"; };
+		182625F9176EA8A8002C1927 /* TRAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TRAppDelegate.m; sourceTree = "<group>"; };
+		182625FB176EA8A8002C1927 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		182625FD176EA8A8002C1927 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		182625FF176EA8A8002C1927 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		18262601176EA8A8002C1927 /* TRViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TRViewController.h; sourceTree = "<group>"; };
+		18262602176EA8A8002C1927 /* TRViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TRViewController.m; sourceTree = "<group>"; };
+		18262605176EA8A8002C1927 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/TRViewController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		182625E2176EA8A8002C1927 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				182625EA176EA8A8002C1927 /* UIKit.framework in Frameworks */,
+				182625EC176EA8A8002C1927 /* Foundation.framework in Frameworks */,
+				182625EE176EA8A8002C1927 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		182625DA176EA8A8002C1927 = {
+			isa = PBXGroup;
+			children = (
+				182625EF176EA8A8002C1927 /* Demo2_GR_Pinch */,
+				182625E8176EA8A8002C1927 /* Frameworks */,
+				182625E6176EA8A8002C1927 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		182625E6176EA8A8002C1927 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				182625E5176EA8A8002C1927 /* Demo2_GR_Pinch.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		182625E8176EA8A8002C1927 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				182625E9176EA8A8002C1927 /* UIKit.framework */,
+				182625EB176EA8A8002C1927 /* Foundation.framework */,
+				182625ED176EA8A8002C1927 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		182625EF176EA8A8002C1927 /* Demo2_GR_Pinch */ = {
+			isa = PBXGroup;
+			children = (
+				182625F8176EA8A8002C1927 /* TRAppDelegate.h */,
+				182625F9176EA8A8002C1927 /* TRAppDelegate.m */,
+				18262601176EA8A8002C1927 /* TRViewController.h */,
+				18262602176EA8A8002C1927 /* TRViewController.m */,
+				18262604176EA8A8002C1927 /* TRViewController.xib */,
+				182625F0176EA8A8002C1927 /* Supporting Files */,
+			);
+			path = Demo2_GR_Pinch;
+			sourceTree = "<group>";
+		};
+		182625F0176EA8A8002C1927 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				182625F1176EA8A8002C1927 /* Demo2_GR_Pinch-Info.plist */,
+				182625F2176EA8A8002C1927 /* InfoPlist.strings */,
+				182625F5176EA8A8002C1927 /* main.m */,
+				182625F7176EA8A8002C1927 /* Demo2_GR_Pinch-Prefix.pch */,
+				182625FB176EA8A8002C1927 /* Default.png */,
+				182625FD176EA8A8002C1927 /* Default@2x.png */,
+				182625FF176EA8A8002C1927 /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		182625E4176EA8A8002C1927 /* Demo2_GR_Pinch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 18262609176EA8A8002C1927 /* Build configuration list for PBXNativeTarget "Demo2_GR_Pinch" */;
+			buildPhases = (
+				182625E1176EA8A8002C1927 /* Sources */,
+				182625E2176EA8A8002C1927 /* Frameworks */,
+				182625E3176EA8A8002C1927 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Demo2_GR_Pinch;
+			productName = Demo2_GR_Pinch;
+			productReference = 182625E5176EA8A8002C1927 /* Demo2_GR_Pinch.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		182625DC176EA8A8002C1927 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = TR;
+				LastUpgradeCheck = 0450;
+				ORGANIZATIONNAME = tarena;
+			};
+			buildConfigurationList = 182625DF176EA8A8002C1927 /* Build configuration list for PBXProject "Demo2_GR_Pinch" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 182625DA176EA8A8002C1927;
+			productRefGroup = 182625E6176EA8A8002C1927 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				182625E4176EA8A8002C1927 /* Demo2_GR_Pinch */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		182625E3176EA8A8002C1927 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				182625F4176EA8A8002C1927 /* InfoPlist.strings in Resources */,
+				182625FC176EA8A8002C1927 /* Default.png in Resources */,
+				182625FE176EA8A8002C1927 /* Default@2x.png in Resources */,
+				18262600176EA8A8002C1927 /* Default-568h@2x.png in Resources */,
+				18262606176EA8A8002C1927 /* TRViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		182625E1176EA8A8002C1927 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				182625F6176EA8A8002C1927 /* main.m in Sources */,
+				182625FA176EA8A8002C1927 /* TRAppDelegate.m in Sources */,
+				18262603176EA8A8002C1927 /* TRViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		182625F2176EA8A8002C1927 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				182625F3176EA8A8002C1927 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		18262604176EA8A8002C1927 /* TRViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				18262605176EA8A8002C1927 /* en */,
+			);
+			name = TRViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		18262607176EA8A8002C1927 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		18262608176EA8A8002C1927 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1826260A176EA8A8002C1927 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Demo2_GR_Pinch/Demo2_GR_Pinch-Prefix.pch";
+				INFOPLIST_FILE = "Demo2_GR_Pinch/Demo2_GR_Pinch-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		1826260B176EA8A8002C1927 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Demo2_GR_Pinch/Demo2_GR_Pinch-Prefix.pch";
+				INFOPLIST_FILE = "Demo2_GR_Pinch/Demo2_GR_Pinch-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		182625DF176EA8A8002C1927 /* Build configuration list for PBXProject "Demo2_GR_Pinch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				18262607176EA8A8002C1927 /* Debug */,
+				18262608176EA8A8002C1927 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		18262609176EA8A8002C1927 /* Build configuration list for PBXNativeTarget "Demo2_GR_Pinch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1826260A176EA8A8002C1927 /* Debug */,
+				1826260B176EA8A8002C1927 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 182625DC176EA8A8002C1927 /* Project object */;
+}

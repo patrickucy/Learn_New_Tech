@@ -1,0 +1,81 @@
+day20
+{AM1}
+一、Core Data
+	1.	是什么？
+		苹果自己使用的数据框架
+	2.	优势
+		对于中大型的数据结构管理 非常方便
+	3.	劣势
+		存储的数据不能跨平台，只能在iOS以及Mac OS X平台下使用
+	4.	什么是实体
+		
+	5.	Core Data使用步骤
+		1>	创建Core Data模板
+		2>	在Core Data文件内增加实体
+				实体就是用于存储业务数据的类
+		3>	根据实体生成实体类
+			1)	生成的类都是继承NSManagedObject
+				继承这个类是为了协助CoreData管理你这个对象
+			2)	生成的类的.m文件内有@dynamic
+				将来的gettersetter不由oc语法本身决定
+				而由coredata自己实现
+			3)	生成的类如果不勾选
+				基本数据类型会被NSNumber包装
+		4>	使用ManagedObjectContext环境对数据进行操作
+			1)	获取ManagedObjectContext
+				[[UIApplication sharedApplication] delegate]
+				从AppDelegate里获取
+{AM2}
+		5>	在合适的时候保存
+	6.	深入增删改查
+		1>	查
+			NSFetchRequest
+			1.	指定查询数据类型
+			2.	排序
+			3.	筛选
+			4.	Error
+		2>	实体增加消息时
+			需要增加分类
+			因为实体的类代码 随时可能会被xCode重新覆盖一遍
+		3>	增
+			使用MOC直接增加
+		4>	改
+			直接改
+		5>	删除
+			使用MOC直接删除
+			1)	在  Core Data  中
+			2)	View Controller 中的数据副本
+			3)	TableView 的 cell
+	7.	多实体关联
+		1>	什么？
+			多个数据对象之间的关系（包含）
+		2>	关联种类
+			方向
+			1.	双向关联
+			2.	单向关联
+			
+			数量
+			1.	To One		对一
+			2.	To Many 	对多
+			
+			一对多
+			-> 对多
+			<- 对一
+			
+			多对多
+			-> 对多
+			<- 对多
+			
+		3>	 加入关联
+			contact.group = group
+			contact         group 必须是当前已经在草原上的对象
+		4>	根据关联查找
+			predicate －>
+			Employee
+			"department.id == %@", departmentId
+		
+额外、
+entity			实体			An1 Ti4 Ti4
+inverse			反向、反转	  Yin3 Ver4 Si.
+
+

@@ -1,0 +1,154 @@
+day11
+{AM1}
+一、	Autolayout
+	1.	制作方式
+		1)	拖拽
+			紫色的约束（系统为了让控件能够正常的显示而自动增加的）
+			蓝色的约束（制作方自己指定的约束）
+	2.	两大条件
+		1)	描述清晰
+			你必须完全指定任何一个控件的 位置 大小
+			位置（xy必须表述到位）
+			1>	对容器（父视图）边保持间距
+				向上下对齐 修改的是y坐标
+				向左右对齐 修改的是x坐标
+			2>	对容器（父视图）对齐（横向居中，纵向居中）
+				横向居中修改的是x坐标
+				纵向居中修改的是y坐标 
+			2>	参照其它控件对齐（上下左右边横中纵中）
+				横向对齐修改的是y坐标
+				纵向对齐修改的是x坐标
+			3>	对其它控件保持间距（横向间距纵向间距）
+				横向保持间距修改的是x坐标
+				纵向保持间距修改的是y坐标
+				（2／3交叉使用）
+			
+			大小
+			1>	最佳大小
+				UILabel UIButton UITextField
+				UIStepper UISlider
+				UIActivityIndicator
+				有些系统所写控件会提供最佳大小
+				这个控件在最佳大小内显示是最完美的
+				宽度：根据内容而决定
+				高度：根据苹果认为最好看的
+			2>	直接指定大小
+				指定宽就是修改w
+				指定高就是修改h
+			3>	参照其它控件保持一致大小
+				参照其它控件的宽度 就是修改w
+				参照其它控件的高度 就是修改y
+				
+			Final.
+				没指明的信息可以通过其它信息完全推算
+				
+				
+			
+		2)	互不冲突
+			1>	不能有两个或以上的约束同时描述同一个视图
+				的同一个信息并构成逻辑冲突
+				x y w h
+		{AM2}
+			2>	当前约束不能与其它约束已经构成的推算/环境 冲突
+		[两个等宽按钮调整]
+	1.	制作方式
+		2)	代码指明 
+			view1.attr1 = view2.attr2 * multiplier 
+							+ constant
+			
+			button.left = superview.left * 1 + 10;
+			
+			button.frame.origin.y = 10;
+			button.frame.origin.y = 0 + 10;
+			button.top = superview.top + 10;
+			button.top = superview.top * 1 + 10;
+			
+			button.frame.origin.x = self.view.bounds.size.width - 10 - button.frame.size.width
+			button.frame.origin.x + button.frame.size.width = self.view.bounds.size.width - 10;
+			button.right = self.view.bounds.size.width - 10;
+			button.right = superview.right - 10;
+			button.right = superview.right * 1 - 10;
+			
+			button.frame.size.width = 60;
+			button.width = 0 * 0 + 60
+			
+			button1.frame.size.width = button2.frame.size.width
+			button1.width = button2.width
+			button1.width = button2.width * 1 + 0;
+			
+			+ (id)constraintWithItem:view1 
+			               attribute:attr1 
+			               relatedBy:relation 
+			                  toItem:view2 
+			               attribute:attr2 
+			              multiplier:multiplier 
+			                constant:c
+{PM1}
+	3.	增加约束时的位置
+		最小公倍数
+		4 4 4	俩数一样				数本身
+		2 4	4	一个数是另外一个数字的倍数 大数
+		3 4 12 	两个数字没多大关联        找到最小的倍数
+		合法位置：找到一个能管辖(所有涉嫌被约束的视图)的大视图
+		1>	给一个视图自己加
+			比如：设置一个按钮的宽度为100
+			将约束加在：视图本身上
+		
+		2>	给一个视图和它的父视图*加
+			比如：设置按钮的左边距离父视图10p
+			将约束加在：父视图身上
+		
+		3>	给一个视图和它平行或不相干的视图加
+			比如：设置一个按钮和另外一个按钮横向保持10p的距离
+			将约束加在：一个父视图（是这两个视图的共同父视图）
+		
+		也可以加在合法位置的父视图
+		
+	1.	制作方式
+		3)	Visual Format Language 可视化格式语言
+		|                |
+		|                |
+		|                |
+		|                |
+		|                |
+		|-20-[button]-20-|
+		|                |
+		
+		|-20-[button1]-20-[button2(==button1)]-20-|
+		
+		返回值是多个constraint
+		{PM2}
+	4.	常见报错
+		1> 违反描述清晰
+			ambigious						
+		2> 违反互不冲突
+			Unable to simultaneously satisfy constraints	
+		[P22]
+		1.	按钮在屏幕右下角各10
+			按钮的宽度是100，高度60	V:[button(60)]
+			[button(100)]-10-|
+			V:[button(60)]-10-|
+		//2.	一个按钮在屏幕的正中央
+		3.	两个按钮在屏幕的上方
+			分别和两侧外边保持10
+			两个按钮之间保持10
+			两个按钮的宽度相等	[b1(==b2)]
+			|-10-[button1]-10-[button2(==button1)]-10-|
+			NSLayoutFormatAlignAllTop
+			V:|-10-[button1]
+		4.	一个UIImageView 和上下左右都相距10 
+{PM3}
+	5.	优先级	
+	
+二、Core Graphics
+	作业
+		0.
+		1. 绘制 winphone 消息泡泡
+		
+			
+		
+	
+		
+
+				
+	

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1811" systemVersion="12A269" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="TRContact" representedClassName="TRContact" syncable="YES">
+        <attribute name="age" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="phoneNumber" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="group" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="TRGroup" inverseName="contacts" inverseEntity="TRGroup" syncable="YES"/>
+    </entity>
+    <entity name="TRGroup" representedClassName="TRGroup" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="contacts" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="TRContact" inverseName="group" inverseEntity="TRContact" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="TRContact" positionX="-3755" positionY="-4392" width="128" height="103"/>
+        <element name="TRGroup" positionX="-3987" positionY="-4366" width="128" height="73"/>
+    </elements>
+</model>

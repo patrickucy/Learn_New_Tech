@@ -1,0 +1,298 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		180DD2E31760277C00071B41 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 180DD2E21760277C00071B41 /* UIKit.framework */; };
+		180DD2E51760277C00071B41 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 180DD2E41760277C00071B41 /* Foundation.framework */; };
+		180DD2E71760277C00071B41 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 180DD2E61760277C00071B41 /* CoreGraphics.framework */; };
+		180DD2ED1760277C00071B41 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 180DD2EB1760277C00071B41 /* InfoPlist.strings */; };
+		180DD2EF1760277C00071B41 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 180DD2EE1760277C00071B41 /* main.m */; };
+		180DD2F31760277C00071B41 /* TRAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 180DD2F21760277C00071B41 /* TRAppDelegate.m */; };
+		180DD2F51760277C00071B41 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 180DD2F41760277C00071B41 /* Default.png */; };
+		180DD2F71760277C00071B41 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 180DD2F61760277C00071B41 /* Default@2x.png */; };
+		180DD2F91760277C00071B41 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 180DD2F81760277C00071B41 /* Default-568h@2x.png */; };
+		180DD2FC1760277C00071B41 /* TRViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 180DD2FB1760277C00071B41 /* TRViewController.m */; };
+		180DD2FF1760277C00071B41 /* TRViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 180DD2FD1760277C00071B41 /* TRViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		180DD2DE1760277C00071B41 /* Demo1_BarButtonItem.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Demo1_BarButtonItem.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		180DD2E21760277C00071B41 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		180DD2E41760277C00071B41 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		180DD2E61760277C00071B41 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		180DD2EA1760277C00071B41 /* Demo1_BarButtonItem-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Demo1_BarButtonItem-Info.plist"; sourceTree = "<group>"; };
+		180DD2EC1760277C00071B41 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		180DD2EE1760277C00071B41 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		180DD2F01760277C00071B41 /* Demo1_BarButtonItem-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Demo1_BarButtonItem-Prefix.pch"; sourceTree = "<group>"; };
+		180DD2F11760277C00071B41 /* TRAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TRAppDelegate.h; sourceTree = "<group>"; };
+		180DD2F21760277C00071B41 /* TRAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TRAppDelegate.m; sourceTree = "<group>"; };
+		180DD2F41760277C00071B41 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		180DD2F61760277C00071B41 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		180DD2F81760277C00071B41 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		180DD2FA1760277C00071B41 /* TRViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TRViewController.h; sourceTree = "<group>"; };
+		180DD2FB1760277C00071B41 /* TRViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TRViewController.m; sourceTree = "<group>"; };
+		180DD2FE1760277C00071B41 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/TRViewController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		180DD2DB1760277C00071B41 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				180DD2E31760277C00071B41 /* UIKit.framework in Frameworks */,
+				180DD2E51760277C00071B41 /* Foundation.framework in Frameworks */,
+				180DD2E71760277C00071B41 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		180DD2D31760277C00071B41 = {
+			isa = PBXGroup;
+			children = (
+				180DD2E81760277C00071B41 /* Demo1_BarButtonItem */,
+				180DD2E11760277C00071B41 /* Frameworks */,
+				180DD2DF1760277C00071B41 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		180DD2DF1760277C00071B41 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				180DD2DE1760277C00071B41 /* Demo1_BarButtonItem.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		180DD2E11760277C00071B41 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				180DD2E21760277C00071B41 /* UIKit.framework */,
+				180DD2E41760277C00071B41 /* Foundation.framework */,
+				180DD2E61760277C00071B41 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		180DD2E81760277C00071B41 /* Demo1_BarButtonItem */ = {
+			isa = PBXGroup;
+			children = (
+				180DD2F11760277C00071B41 /* TRAppDelegate.h */,
+				180DD2F21760277C00071B41 /* TRAppDelegate.m */,
+				180DD2FA1760277C00071B41 /* TRViewController.h */,
+				180DD2FB1760277C00071B41 /* TRViewController.m */,
+				180DD2FD1760277C00071B41 /* TRViewController.xib */,
+				180DD2E91760277C00071B41 /* Supporting Files */,
+			);
+			path = Demo1_BarButtonItem;
+			sourceTree = "<group>";
+		};
+		180DD2E91760277C00071B41 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				180DD2EA1760277C00071B41 /* Demo1_BarButtonItem-Info.plist */,
+				180DD2EB1760277C00071B41 /* InfoPlist.strings */,
+				180DD2EE1760277C00071B41 /* main.m */,
+				180DD2F01760277C00071B41 /* Demo1_BarButtonItem-Prefix.pch */,
+				180DD2F41760277C00071B41 /* Default.png */,
+				180DD2F61760277C00071B41 /* Default@2x.png */,
+				180DD2F81760277C00071B41 /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		180DD2DD1760277C00071B41 /* Demo1_BarButtonItem */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 180DD3021760277C00071B41 /* Build configuration list for PBXNativeTarget "Demo1_BarButtonItem" */;
+			buildPhases = (
+				180DD2DA1760277C00071B41 /* Sources */,
+				180DD2DB1760277C00071B41 /* Frameworks */,
+				180DD2DC1760277C00071B41 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Demo1_BarButtonItem;
+			productName = Demo1_BarButtonItem;
+			productReference = 180DD2DE1760277C00071B41 /* Demo1_BarButtonItem.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		180DD2D51760277C00071B41 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = TR;
+				LastUpgradeCheck = 0450;
+				ORGANIZATIONNAME = tarena;
+			};
+			buildConfigurationList = 180DD2D81760277C00071B41 /* Build configuration list for PBXProject "Demo1_BarButtonItem" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 180DD2D31760277C00071B41;
+			productRefGroup = 180DD2DF1760277C00071B41 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				180DD2DD1760277C00071B41 /* Demo1_BarButtonItem */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		180DD2DC1760277C00071B41 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				180DD2ED1760277C00071B41 /* InfoPlist.strings in Resources */,
+				180DD2F51760277C00071B41 /* Default.png in Resources */,
+				180DD2F71760277C00071B41 /* Default@2x.png in Resources */,
+				180DD2F91760277C00071B41 /* Default-568h@2x.png in Resources */,
+				180DD2FF1760277C00071B41 /* TRViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		180DD2DA1760277C00071B41 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				180DD2EF1760277C00071B41 /* main.m in Sources */,
+				180DD2F31760277C00071B41 /* TRAppDelegate.m in Sources */,
+				180DD2FC1760277C00071B41 /* TRViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		180DD2EB1760277C00071B41 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				180DD2EC1760277C00071B41 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		180DD2FD1760277C00071B41 /* TRViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				180DD2FE1760277C00071B41 /* en */,
+			);
+			name = TRViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		180DD3001760277C00071B41 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		180DD3011760277C00071B41 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		180DD3031760277C00071B41 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Demo1_BarButtonItem/Demo1_BarButtonItem-Prefix.pch";
+				INFOPLIST_FILE = "Demo1_BarButtonItem/Demo1_BarButtonItem-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		180DD3041760277C00071B41 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Demo1_BarButtonItem/Demo1_BarButtonItem-Prefix.pch";
+				INFOPLIST_FILE = "Demo1_BarButtonItem/Demo1_BarButtonItem-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		180DD2D81760277C00071B41 /* Build configuration list for PBXProject "Demo1_BarButtonItem" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				180DD3001760277C00071B41 /* Debug */,
+				180DD3011760277C00071B41 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		180DD3021760277C00071B41 /* Build configuration list for PBXNativeTarget "Demo1_BarButtonItem" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				180DD3031760277C00071B41 /* Debug */,
+				180DD3041760277C00071B41 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 180DD2D51760277C00071B41 /* Project object */;
+}

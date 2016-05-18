@@ -1,0 +1,298 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		182510B1176B0579007F7A0C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 182510B0176B0579007F7A0C /* UIKit.framework */; };
+		182510B3176B0579007F7A0C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 182510B2176B0579007F7A0C /* Foundation.framework */; };
+		182510B5176B0579007F7A0C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 182510B4176B0579007F7A0C /* CoreGraphics.framework */; };
+		182510BB176B0579007F7A0C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 182510B9176B0579007F7A0C /* InfoPlist.strings */; };
+		182510BD176B0579007F7A0C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 182510BC176B0579007F7A0C /* main.m */; };
+		182510C1176B0579007F7A0C /* TRAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 182510C0176B0579007F7A0C /* TRAppDelegate.m */; };
+		182510C3176B0579007F7A0C /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 182510C2176B0579007F7A0C /* Default.png */; };
+		182510C5176B0579007F7A0C /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 182510C4176B0579007F7A0C /* Default@2x.png */; };
+		182510C7176B0579007F7A0C /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 182510C6176B0579007F7A0C /* Default-568h@2x.png */; };
+		182510CA176B0579007F7A0C /* TRViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 182510C9176B0579007F7A0C /* TRViewController.m */; };
+		182510CD176B0579007F7A0C /* TRViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 182510CB176B0579007F7A0C /* TRViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		182510AC176B0579007F7A0C /* Demo4_PickerView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Demo4_PickerView.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		182510B0176B0579007F7A0C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		182510B2176B0579007F7A0C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		182510B4176B0579007F7A0C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		182510B8176B0579007F7A0C /* Demo4_PickerView-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Demo4_PickerView-Info.plist"; sourceTree = "<group>"; };
+		182510BA176B0579007F7A0C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		182510BC176B0579007F7A0C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		182510BE176B0579007F7A0C /* Demo4_PickerView-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Demo4_PickerView-Prefix.pch"; sourceTree = "<group>"; };
+		182510BF176B0579007F7A0C /* TRAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TRAppDelegate.h; sourceTree = "<group>"; };
+		182510C0176B0579007F7A0C /* TRAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TRAppDelegate.m; sourceTree = "<group>"; };
+		182510C2176B0579007F7A0C /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		182510C4176B0579007F7A0C /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		182510C6176B0579007F7A0C /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		182510C8176B0579007F7A0C /* TRViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TRViewController.h; sourceTree = "<group>"; };
+		182510C9176B0579007F7A0C /* TRViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TRViewController.m; sourceTree = "<group>"; };
+		182510CC176B0579007F7A0C /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/TRViewController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		182510A9176B0579007F7A0C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				182510B1176B0579007F7A0C /* UIKit.framework in Frameworks */,
+				182510B3176B0579007F7A0C /* Foundation.framework in Frameworks */,
+				182510B5176B0579007F7A0C /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		182510A1176B0579007F7A0C = {
+			isa = PBXGroup;
+			children = (
+				182510B6176B0579007F7A0C /* Demo4_PickerView */,
+				182510AF176B0579007F7A0C /* Frameworks */,
+				182510AD176B0579007F7A0C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		182510AD176B0579007F7A0C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				182510AC176B0579007F7A0C /* Demo4_PickerView.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		182510AF176B0579007F7A0C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				182510B0176B0579007F7A0C /* UIKit.framework */,
+				182510B2176B0579007F7A0C /* Foundation.framework */,
+				182510B4176B0579007F7A0C /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		182510B6176B0579007F7A0C /* Demo4_PickerView */ = {
+			isa = PBXGroup;
+			children = (
+				182510BF176B0579007F7A0C /* TRAppDelegate.h */,
+				182510C0176B0579007F7A0C /* TRAppDelegate.m */,
+				182510C8176B0579007F7A0C /* TRViewController.h */,
+				182510C9176B0579007F7A0C /* TRViewController.m */,
+				182510CB176B0579007F7A0C /* TRViewController.xib */,
+				182510B7176B0579007F7A0C /* Supporting Files */,
+			);
+			path = Demo4_PickerView;
+			sourceTree = "<group>";
+		};
+		182510B7176B0579007F7A0C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				182510B8176B0579007F7A0C /* Demo4_PickerView-Info.plist */,
+				182510B9176B0579007F7A0C /* InfoPlist.strings */,
+				182510BC176B0579007F7A0C /* main.m */,
+				182510BE176B0579007F7A0C /* Demo4_PickerView-Prefix.pch */,
+				182510C2176B0579007F7A0C /* Default.png */,
+				182510C4176B0579007F7A0C /* Default@2x.png */,
+				182510C6176B0579007F7A0C /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		182510AB176B0579007F7A0C /* Demo4_PickerView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 182510D0176B0579007F7A0C /* Build configuration list for PBXNativeTarget "Demo4_PickerView" */;
+			buildPhases = (
+				182510A8176B0579007F7A0C /* Sources */,
+				182510A9176B0579007F7A0C /* Frameworks */,
+				182510AA176B0579007F7A0C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Demo4_PickerView;
+			productName = Demo4_PickerView;
+			productReference = 182510AC176B0579007F7A0C /* Demo4_PickerView.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		182510A3176B0579007F7A0C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = TR;
+				LastUpgradeCheck = 0450;
+				ORGANIZATIONNAME = tarena;
+			};
+			buildConfigurationList = 182510A6176B0579007F7A0C /* Build configuration list for PBXProject "Demo4_PickerView" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 182510A1176B0579007F7A0C;
+			productRefGroup = 182510AD176B0579007F7A0C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				182510AB176B0579007F7A0C /* Demo4_PickerView */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		182510AA176B0579007F7A0C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				182510BB176B0579007F7A0C /* InfoPlist.strings in Resources */,
+				182510C3176B0579007F7A0C /* Default.png in Resources */,
+				182510C5176B0579007F7A0C /* Default@2x.png in Resources */,
+				182510C7176B0579007F7A0C /* Default-568h@2x.png in Resources */,
+				182510CD176B0579007F7A0C /* TRViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		182510A8176B0579007F7A0C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				182510BD176B0579007F7A0C /* main.m in Sources */,
+				182510C1176B0579007F7A0C /* TRAppDelegate.m in Sources */,
+				182510CA176B0579007F7A0C /* TRViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		182510B9176B0579007F7A0C /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				182510BA176B0579007F7A0C /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		182510CB176B0579007F7A0C /* TRViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				182510CC176B0579007F7A0C /* en */,
+			);
+			name = TRViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		182510CE176B0579007F7A0C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		182510CF176B0579007F7A0C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		182510D1176B0579007F7A0C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Demo4_PickerView/Demo4_PickerView-Prefix.pch";
+				INFOPLIST_FILE = "Demo4_PickerView/Demo4_PickerView-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		182510D2176B0579007F7A0C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Demo4_PickerView/Demo4_PickerView-Prefix.pch";
+				INFOPLIST_FILE = "Demo4_PickerView/Demo4_PickerView-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		182510A6176B0579007F7A0C /* Build configuration list for PBXProject "Demo4_PickerView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				182510CE176B0579007F7A0C /* Debug */,
+				182510CF176B0579007F7A0C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		182510D0176B0579007F7A0C /* Build configuration list for PBXNativeTarget "Demo4_PickerView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				182510D1176B0579007F7A0C /* Debug */,
+				182510D2176B0579007F7A0C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 182510A3176B0579007F7A0C /* Project object */;
+}

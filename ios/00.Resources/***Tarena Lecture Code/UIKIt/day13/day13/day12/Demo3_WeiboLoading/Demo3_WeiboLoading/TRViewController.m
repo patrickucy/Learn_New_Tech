@@ -1,0 +1,36 @@
+//
+//  TRViewController.m
+//  Demo3_WeiboLoading
+//
+//  Created by apple on 13-6-20.
+//  Copyright (c) 2013年 tarena. All rights reserved.
+//
+
+#import "TRViewController.h"
+
+@interface TRViewController ()
+
+@end
+
+@implementation TRViewController
+
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+	// Do any additional setup after loading the view, typically from a nib.
+}
+
+- (void)didReceiveMemoryWarning
+{
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
+- (IBAction)change:(UISlider *)sender {
+    
+    self.loadingView.value = sender.value;
+    
+
+    
+}
+@end

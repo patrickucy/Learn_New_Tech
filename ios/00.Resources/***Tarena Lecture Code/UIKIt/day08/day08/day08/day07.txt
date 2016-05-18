@@ -1,0 +1,142 @@
+day07
+{AM1}
+额外、WWDC
+	Mac Pro  
+	Air 13 12h
+		Mac OS X Mountain Lion 
+		Mac OS X Sea Lion
+		Mac OS X Mavericks
+		Map Flyover
+	iOS7
+		和谐 清新 深邃
+		Scott 离职了 写实派的
+		Jony
+		AirDrop 
+		Peer to Peer Connectivity
+		Dynamic UI
+	数据
+		智能手机使用时长
+		android 45mins
+		iPhone 75mins
+		
+		Mobile Web Market Share
+		60% iOS
+		24% Android
+		16% Other
+		
+		版本分布
+		iOS 7 
+		iOS 6.0	93%
+		iOS 5	6%
+		iOS <4	1%
+		
+		Android
+		Ginger Bread 2.3 37%	2010
+		Ice Cream Sandwich 4.0 26% 2011
+		Jelly Bean 4.1/2 33%	2012 
+		
+		iOS 7 beta 公测
+		好多人刷了iOS7之后表示经常崩溃 
+		消费者对此 非常不满
+{AM2}
+一、Table View
+	1.	Section
+		NSIndexPath
+		section:indexpath所表示的层级结构的第一层
+		row:indexpath所表示的层级结构的第二层
+		中国
+			北京
+				朝阳
+				海淀
+			上海
+				浦东
+				静安
+			广东
+				广州
+				佛山	2,1  section,row
+{PM1}	
+	 Chain of Responsibility
+	 找对象处理问题 
+	 如果处理不了就找下一个对象
+	 直到找到一个能处理的对象为止
+	 
+	 接电话
+	 维修
+	 售后退货
+	 找经理索赔
+	 	
+	 点餐服务人员
+	 值班经理
+	 总经理
+{PM2} 
+	响应链代码
+{PM3}
+一、TableView
+	tableview
+	1.	通过继承
+	2.	通过推拽（组合）
+	3.	通过代码直接写
+	
+	自定cell
+	0.	自定义Cell的accessoryView
+		view内可以放任何视图UIView
+		accessoryView这个属性只负责放上去
+		至于这个view自己的事件处理需要自己另外再写
+	1.	代码与系统控件组合
+		要将系统控件放入cell.contentView
+		contentView就跟self.view差不多
+		你可以放任何你想加入的东西 
+		要注意
+		cell = 重用机制获取可重用的cell
+		子控件 = nil
+		if(cell == nil){
+			构建cell
+			子控件的配置
+			1. 构建子控件
+			2.	设置子控件的值
+			3.	为子控件增加tag 用于后续查找
+			4.	将子控件加入到cell.contentView内
+		} else {
+			 从cell.contentView内 通过tag 拿到子控件
+		}
+		子控件数据的刷新
+	2.	nib文件拖拽与Cell子类联合
+	3.	直接自定义Cell子类 与自定义UIView配合
+	
+作业
+	
+	TRFoodType
+		name:NSString //凉菜 热菜 | 小菜 主食 点心
+		foods:NSArray 
+			
+			TRFood
+				name:NSString //宫保鸡丁 鱼香肉丝 鸡蛋西红柿
+		
+	TRAppDelegate
+	
+	- (NSArray *)menu{
+		TRFood * songhuadan = ;;;;;;;
+		TRFoodTypes * liangcai = ;;;;;;;;
+		liangcai.foods = @[songhuadan, paojiaofengzhua];
+		return @[liangcai, recai];
+	}
+	
+	
+	TRViewController
+		tableView用纯代码生成
+		foodTypes:NSArray
+		
+		
+	热菜
+	@ －－－－－－－ @
+	｜ 宫保鸡丁     |
+	| ------------|
+	| 鱼香肉丝     ｜
+	@ －－－－－－－@
+	
+	凉菜
+	@ －－－－－－－ @
+	｜ 松花蛋      |
+	| ------------|
+	| 泡椒风抓     ｜
+	@ －－－－－－－@

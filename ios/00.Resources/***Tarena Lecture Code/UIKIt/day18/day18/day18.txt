@@ -1,0 +1,50 @@
+day18
+{AM1}
+一、Propery List 高阶
+	1.	什么是 Property list ？
+		一个xml文件
+		用于存储轻量级数据
+	2.	Property List可以用于存储什么数据
+	 	NSArray
+	 	NSDictionary
+	 	NSString 
+	 	NSData
+	 	NSNumber
+	3.	什么时候用
+		1)	编程初期
+		2)	用户设置
+		3)	对照表(...)
+	4.	编辑PropertyList
+		1)	跟节点必须是NSDictionary
+			或者是NSArray
+		2)	你在编辑PropertyList的时候
+			其实就是在编写XML
+		3)	为字典/数组增加子元素时，
+			先按小箭头打开，在按加号添加
+	5.	
+	
+	TRAlbum
+	@property (strong, nonatomic) NSString * name; "Viva la Vida"
+	@property (strong, nonatomic) NSArray * songs;
+	
+	@"name" -> @"Viva La Vida"
+	@"songs" -> array
+	
+	
+	
+		
+		 
+	
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	 	

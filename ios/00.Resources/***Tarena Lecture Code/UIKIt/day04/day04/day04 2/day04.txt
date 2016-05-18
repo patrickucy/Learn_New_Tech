@@ -1,0 +1,89 @@
+day04
+{AM1}
+P07
+一、BarButtonItem
+	1.	显示
+		 1)	放在被navigationController包含时候的
+		 	上边的navigationBar上
+		 2)	navigationBar
+		 	在iOS5.0之前 左右各一个
+		 	在iOS5.0之后 左右可以放多个 
+		 3)	设置navigationBar上显示的按钮
+		 	根title一样
+		 	用self.navigationItem设置
+		 4)	也可以放在Toolbar上
+		  	需要
+		  	self.navigationController.toolbarHidden = NO;
+		 5)	特殊
+		 	FixedSpace（指定宽度的空白的空间）
+		 	FlexibleSpace（指定可伸长的空白空间）
+		 	initWithTitle（指定自定义文字的按钮）
+	[P08]
+	Toolbar
+	|<<       >        >>|
+二、model和navi的融合
+	[P09]
+	高仿系统通信录app的导航按钮
+{PM1}
+三、UIImageView
+{PM2}
+四、UIScrollView
+	1. 是什么？
+		View的容器
+	2. 重要属性值
+		frame.size	展示的时候UIScrollView本身有多大
+		contentSize	告诉UIScrollView里面到底有多大
+		frame
+			origin x和y ！！！相对于父视图的坐标
+			size 宽和高
+		[P10]
+			大概步骤
+			1.	设置三个UIImageView的frame
+				大小和屏幕一样，位置自己算
+			2.	将三个UIImageView加到UIScrollView中
+			3.	设置UIScrollView的contentSize
+			4.	设置UIScrollView的frame
+				大小和屏幕一样
+			5.	将UIScrollView加到主view内 
+		{PM3}
+	3.	放大缩小
+	
+	作业：
+	0.	 复习代码
+	1.	 
+		[P10＋]
+		找到相关数据的规律
+		0 
+		320
+		640
+		i＊320
+		scrollView.pageEnabaled = YES;q
+		为TRViewController增加一个NSArray的property
+		在ViewDidLoad的第一行给数据赋值
+		@[@"Galaxy",@"Elephant"]
+		你要根据文件名的数量和文件名
+		生成[P10]
+		
+		2>
+		NSArray是从AppDelegate里注入的
+		数组信息不在程序里，在plist文件里
+		
+		3>
+		每个图还能放大缩小
+		ImageViewController负责控制放大缩小
+		[scrollView addSubview:imageViewController.view];
+		
+		
+		
+		
+		
+	
+				
+		
+		
+		
+		
+		
+	
+	
+		 	

@@ -21,6 +21,7 @@
     <ul class="list-group">
         <li class="list-group-item" ng-repeat="b in books">
             <span class="glyphicon glyphicon-bookmark"></span>
+
             <span data-price="{{b.price}}" ng-click="showPrice($event)">{{b.title}}</span>
             <span data-id="{{b.id}}" ng-click="hideFunc($event)" style="cursor: pointer;" class="pull-right glyphicon glyphicon-remove"></span>
         </li>

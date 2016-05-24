@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../lib/bootstrap/css/bootstrap.min.css">
+    <script src="../lib/jquery.js"></script>
+    <script src="../lib/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../lib/angular15/angular.min.js"></script>
+    <script src="../lib/angular15/angular-route.js"></script>
+
+    <title>Demo10</title>
+</head>
+
+
+<body class="container">
+<header class="page-header"><h1>Demo10</h1></header>
+
+
+<section>
+
+        <!--显示模板的占位符-->
+        <div class="focus" ng-view></div>
+
+        <div class="row">
+            <div class="col-sm-6">
+                <a href="#login" class="btn btn-default btn-block btn-primary">Login</a>
+            </div>
+            <div class="col-sm-6">
+                <a href="#about" class="btn btn-default btn-block btn-success">About</a>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-sm-6">
+                <script id="login.html" type="text/ng-template">
+                    <!-- 如果这里写的是 login.html 的话, 上面的login id 就会映射到这里, 因为你定义了这个script为login.html, 要不然的话
+                      这里写 id="login" 就是真的去找根目录下面的login.html
+                       实际上ng-template 用的并不是特别多-->
+                    <form>
+                        <div class="form-group">
+                            <label class="control-label" for="userName">User Name</label>
+                            <input type="text" class="form-control">
+                        </div>
+                        <p>
+                            <button type="submit" class="btn btn-info btn-block">Login</button>
+                        </p>
+                    </form>
+                </script>
+            </div>
+            <div class="col-sm-6">
+                <script id="about.html" type="text/ng-template">
+                    <h2> about page </h2>
+                </script>
+            </div>
+        </div>
+
+</section>
+
+
+</body>
+
+
+<script>
+    // 定义木块
+    var app = angular.module("myApp", ['ngRoute']); // this ngRoute is defined
+    app.controller("ctrl", ctrl);
+    // 定义路由映射(模板, 控制器)
+    app.config(['$routeProvider',
+        function($routeProvider){
+            $routeProvider.
+                when('/login', {
+                    templateUrl: "login.html",
+                    controller: "loginCtrl"
+                }).
+                when('/about', {
+                    templateUrl: "about.html",
+                    controller: "aboutCtrl"
+                }).otherwise({
+                    redirectTo: "/login"
+                })
+        }
+    ]);
+
+    // 添加控制器
+    function ctrl($scope) {
+        $scope.msg = "Test controller";
+    }
+
+
+</script>
+</html>

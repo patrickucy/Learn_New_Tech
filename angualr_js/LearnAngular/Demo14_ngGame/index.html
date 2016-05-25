@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="demo14App">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../lib/bootstrap/css/bootstrap.min.css">
+    <script src="../lib/jquery.js"></script>
+    <script src="../lib/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../lib/angular15/angular.min.js"></script>
+    <script src="../lib/angular15/angular-route.js"></script>
+
+    <title>Demo14</title>
+</head>
+
+
+<body class="container">
+<header class="page-header"><h1>Demo14</h1></header>
+
+
+<section ng-controller="gameCtrl">
+
+    <div class="row">
+        <div class="col-sm-4">
+            <game>Come and get me !</game>
+            <game>Come and get me !</game>
+            <game>Come and get me !</game>
+            <game>Come and get me !</game>
+            <game>Come and get me !</game>
+            <game>Come and get me !</game>
+            <game>Come and get me !</game>
+            <game>Come and get me !</game>
+            <game>Come and get me !</game>
+            <game>Come and get me !</game>
+            <game>Come and get me !</game>
+            <game>Come and get me !</game>
+            <game>Come and get me !</game>
+            <game>Come and get me !</game>
+            <game>Come and get me !</game>
+            <game>Come and get me !</game>
+            <game>Come and get me !</game>
+            <game>Come and get me !</game>
+            <game>Come and get me !</game>
+            <game>Come and get me !</game>
+            <game>Come and get me !</game>
+            <game>Come and get me !</game>
+            <game>Come and get me !</game>
+            <game>Come and get me !</game>
+            <game>Come and get me !</game>
+            <game>Come and get me !</game>
+            <game>Come and get me !</game>
+            <game>Come and get me !</game>
+            <game>Come and get me !</game>
+            <game>Come and get me !</game>
+
+        </div>
+    </div>
+
+</section>
+
+
+</body>
+<footer class="navbar-fixed-bottom text-center">
+    <span>Patrick Yu &copy; 2016</span>
+</footer>
+
+<script>
+    var app = angular.module("demo14App", []); // this ngRoute is defined
+
+    app.controller("gameCtrl", function ($scope, $http) {
+
+    });
+
+    app.directive("game", function () {
+        var maxLeft = 400, maxTop = 300;
+        var msg = ["hello", "world", "interesting"];
+        return {
+            compile: function (element, attributes) {
+                element.css({
+                    "position": "absolute",
+                    "border": "1px solid green"
+                });
+
+                element.bind("mouseenter", function (event) {
+                    element.css({
+                        "left": parseInt(Math.random() * 10000 % maxLeft) + "px",
+                        "top": parseInt(Math.random() * 10000 % maxTop) + "px"
+                    });
+
+                    element.text(msg[parseInt(Math.random() * 10000 % msg.length)]);
+
+                    element.bind("click", function () {
+                        element.text("oh my god");
+                        element.unbind("mouseenter");
+                    });
+
+                })
+            },
+        };
+    })
+
+
+</script>
+</html>

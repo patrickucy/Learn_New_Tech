@@ -18,42 +18,31 @@
 
 <section>
 
-        <!--显示模板的占位符-->
-        <div class="focus" ng-view></div>
 
-        <div class="row">
-            <div class="col-sm-6">
-                <a href="#login" class="btn btn-default btn-block btn-primary">Login</a>
-            </div>
-            <div class="col-sm-6">
-                <a href="#about" class="btn btn-default btn-block btn-success">About</a>
-            </div>
+    <div class="row">
+        <div class="col-sm-6">
+            <a href="#login" class="btn btn-default btn-block btn-primary">Login</a>
+            <!--这里的 锚 映射的是下面JavaScript后面 when 所指的那个映射url -->
         </div>
-
-
-        <div class="row">
-            <div class="col-sm-6">
-                <script id="login.html" type="text/ng-template">
-                    <!-- 如果这里写的是 login.html 的话, 上面的login id 就会映射到这里, 因为你定义了这个script为login.html, 要不然的话
-                      这里写 id="login" 就是真的去找根目录下面的login.html
-                       实际上ng-template 用的并不是特别多-->
-                    <form>
-                        <div class="form-group">
-                            <label class="control-label" for="userName">User Name</label>
-                            <input type="text" class="form-control">
-                        </div>
-                        <p>
-                            <button type="submit" class="btn btn-info btn-block">Login</button>
-                        </p>
-                    </form>
-                </script>
-            </div>
-            <div class="col-sm-6">
-                <script id="about.html" type="text/ng-template">
-                    <h2> about page </h2>
-                </script>
-            </div>
+        <div class="col-sm-6">
+            <a href="#about" class="btn btn-default btn-block btn-success">About</a>
         </div>
+    </div>
+    <br>
+
+    <!--显示模板的占位符-->
+    <div class="focus" ng-view></div>
+
+
+    <!--<div class="row">-->
+        <!--<div class="col-sm-6">-->
+            <!--<script id="login.html" type="text/ng-template">这里是脚本块替代的内容</script>-->
+        <!--</div>-->
+
+        <!--<div class="col-sm-6">-->
+            <!--<script id="about.html" type="text/ng-template"></script>-->
+        <!--</div>-->
+    <!--</div>-->
 
 </section>
 
@@ -64,11 +53,14 @@
 <script>
     // 定义木块
     var app = angular.module("myApp", ['ngRoute']); // this ngRoute is defined
-    app.controller("ctrl", ctrl);
     // 定义路由映射(模板, 控制器)
     app.config(['$routeProvider',
-        function($routeProvider){
+        function ($routeProvider) {
             $routeProvider.
+                when("/welcome", {
+                    templateUrl: "welcome.html",
+                    controller: "welcomeCtrl"
+                }).
                 when('/login', {
                     templateUrl: "login.html",
                     controller: "loginCtrl"
@@ -76,17 +68,37 @@
                 when('/about', {
                     templateUrl: "about.html",
                     controller: "aboutCtrl"
-                }).otherwise({
-                    redirectTo: "/login"
+                }).
+                otherwise({
+                    redirectTo: "/welcome"
                 })
         }
     ]);
 
-    // 添加控制器
+    app.controller("ctrl", ctrl);
+    app.controller("loginCtrl", loginCtrl);
+    app.controller("aboutCtrl", aboutCtrl);
+    app.controller("welcomeCtrl", welcomeCtrl);
+
     function ctrl($scope) {
-        $scope.msg = "Test controller";
+        $scope.msg = "test controller";
     }
 
+    function loginCtrl($scope) {
+        $scope.loginTitle = "user login from loginTile";
+    }
+
+    function aboutCtrl($scope, $routeParams) {
+        $scope.aboutTitle = "About me from aboutTitle";
+        $scope.name = $routeParams.name;
+    }
+
+    function welcomeCtrl($scope, $routeParams){
+        console.log($routeParams.username);
+
+        $scope.username = $routeParams.username;
+        $scope.password = $routeParams.password;
+    }
 
 </script>
 </html>

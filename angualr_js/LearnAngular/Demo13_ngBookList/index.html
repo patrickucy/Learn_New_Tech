@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="demo13App">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../lib/bootstrap/css/bootstrap.min.css">
+    <script src="../lib/jquery.js"></script>
+    <script src="../lib/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../lib/angular15/angular.min.js"></script>
+    <script src="../lib/angular15/angular-route.js"></script>
+
+    <title>Demo13</title>
+</head>
+
+
+<body class="container">
+<header class="page-header"><h1>Demo13</h1></header>
+
+
+<section ng-controller="myCtrl">
+
+    <div class="row">
+        <div class="col-sm-4">
+            <booklist data-source="books"></booklist>
+        </div>
+    </div>
+
+</section>
+
+
+</body>
+<footer class="navbar-fixed-bottom text-center">
+    <span>Patrick Yu &copy; 2016</span>
+</footer>
+
+<script>
+    var app = angular.module("demo13App", []); // this ngRoute is defined
+
+    app.controller("myCtrl", function ($scope, $http) {
+        $http.get("../json/books.json").success(function (data) {
+            $scope.books = data;
+        })
+    });
+
+    app.directive("booklist", function () {
+        return {
+            scope: {items: "=source"},
+            template: '<ul class="list-group"><li class="list-group-item" ng-repeat="item in items"><a href="detail.html?id={{item.id}}">{{item.title}}</a></li></ul>'
+        };
+    });
+
+</script>
+</html>

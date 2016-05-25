@@ -1,11 +1,20 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Login</title>
-</head>
-<body>
-
-    <h1>****** Login Page  *******</h1>
-</body>
-</html>
+<!-- 如果这里写的是 login.html 的话, 上面的login id 就会映射到这里, 因为你定义了这个script为login.html, 要不然的话
+                  这里写 id="login" 就是真的去找根目录下面的login.html
+                   实际上ng-template 用的并不是特别多. 这也是 ractive的方法, 就是用JavaScript来作为模板-->
+<form method="get">
+    <legend>
+        <caption>{{loginTitle}}</caption>
+    </legend>
+    <div class="form-group">
+        <label class="control-label">User Name</label>
+        <input ng-model="username" type="text" class="form-control">
+    </div>
+    <div class="form-group">
+        <label class="control-label">Password</label>
+        <input ng-model="password" name="password" type="text" class="form-control">
+    </div>
+    <p>
+        <!--<button type="submit" class="btn btn-info btn-block">Login</button>-->
+        <a href="#welcome?username={{username}}&&password={{password}}" class="btn btn-info btn-block">Login</a>
+    </p>
+</form>

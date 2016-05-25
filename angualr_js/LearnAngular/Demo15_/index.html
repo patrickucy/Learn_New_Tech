@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="demo15App">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../lib/bootstrap/css/bootstrap.min.css">
+    <script src="../lib/jquery.js"></script>
+    <script src="../lib/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../lib/angular15/angular.min.js"></script>
+    <script src="../lib/angular15/angular-route.js"></script>
+
+    <title>Demo15</title>
+</head>
+
+
+<body class="container">
+<header class="page-header"><h1>Demo15</h1></header>
+
+
+<section ng-controller="Ctrl">
+
+    <ul class="list-group">
+        <li class="list-group-item">@title@</li>
+        <li class="list-group-item">@author@</li>
+        <li class="list-group-item">@price@</li>
+        <li class="list-group-item">@pubDate@</li>
+    </ul>
+
+</section>
+
+
+</body>
+<footer class="navbar-fixed-bottom text-center">
+    <span>Patrick Yu &copy; 2016</span>
+</footer>
+
+<script>
+    var app = angular.module("demo15App", []); // this ngRoute is defined
+
+    app.controller("Ctrl", function ($scope, $http) {
+
+    });
+
+    app.directive("game", function () {
+        var maxLeft = 400, maxTop = 300;
+        var msg = ["hello", "world", "interesting"];
+        return {
+            compile: function (element) {
+                element.css({
+                    "position": "absolute",
+                    "border": "1px solid green"
+                });
+
+                element.bind("mouseenter", function () {
+                    element.css({
+                        "left": parseInt(Math.random() * 10000 % maxLeft) + "px",
+                        "top": parseInt(Math.random() * 10000 % maxTop) + "px"
+                    });
+
+                    element.text(msg[parseInt(Math.random() * 10000 % msg.length)]);
+
+                    element.bind("click", function () {
+                        element.text("oh my god");
+                        element.unbind("mouseenter");
+                    });
+
+                })
+            }
+        };
+    })
+
+
+</script>
+</html>

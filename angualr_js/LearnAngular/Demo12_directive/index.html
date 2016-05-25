@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="demo12App">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../lib/bootstrap/css/bootstrap.min.css">
+    <script src="../lib/jquery.js"></script>
+    <script src="../lib/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../lib/angular15/angular.min.js"></script>
+    <script src="../lib/angular15/angular-route.js"></script>
+
+    <title>Demo12</title>
+</head>
+
+
+<body class="container">
+<header class="page-header"><h1>Demo12_directive</h1></header>
+
+
+<section ng-controller="myCtrl">
+
+    <div class="row">
+        <mybtn data-name="val"></mybtn>
+        now you inject this data-name value to this directive
+        <mya data-y="varLink"></mya>
+    </div>
+
+</section>
+
+
+</body>
+<footer class="navbar-fixed-bottom text-center">
+    <span>Patrick Yu &copy; 2016</span>
+</footer>
+
+<script>
+    var app = angular.module("demo12App", []); // this ngRoute is defined
+
+
+    app.directive("mybtn", function () {
+        return {
+            restrict: 'ECAM',
+            scope: {
+                btn: '=name'   // two way binding variable
+            },
+            template: '<button type="button" class="btn btn-default">{{btn.name}}</button>',
+            compile : function (element, attributes) {
+                element.css("background-color", "#abc");
+            }
+        };
+    });
+
+    app.directive("mya", function () {
+        return {
+            restrict: 'ECAM',
+            scope: {
+                link: '=y'   // two way binding variable
+            },
+            template: '<a class="btn btn-danger" href="{{link}}">Go to Google</a>'
+        };
+    });
+
+    app.controller("myCtrl", function ($scope) {
+        $scope.val = {name: "show"};
+        $scope.varLink = "http://www.google.com";
+    });
+
+
+</script>
+</html>

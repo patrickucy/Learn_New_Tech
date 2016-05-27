@@ -23,13 +23,28 @@
         <li class="list-group-item">@author@</li>
         <li class="list-group-item">@price@</li>
         <li class="list-group-item">@pubDate@</li>
+        <kbd>1</kbd>
+        <kbd>2</kbd>
+        <kbd>3</kbd>
+        <kbd>a</kbd>
+        <kbd>b</kbd>
+        <kbd>c</kbd>
     </ul>
+
+    <div>
+        <span>{{msg}}</span> <br>
+        <div style="width: 100px; height: 100px; background-color: red; border-radius: {{circle.r}}px;">123</div>
+        <input type="number" ng-model="circle.r"> <br>
+        <span> {{ circle.area() }}</span> <br>
+        <span>{{len()}}</span> <br>
+    </div>
+
 
 </section>
 
 
 </body>
-<footer class="navbar-fixed-bottom text-center">
+<footer class="footer text-center">
     <span>Patrick Yu &copy; 2016</span>
 </footer>
 
@@ -37,7 +52,22 @@
     var app = angular.module("demo15App", []); // this ngRoute is defined
 
     app.controller("Ctrl", function ($scope, $http) {
+        $scope.msg = "hello ctrl";
+        $scope.circle = {
+            r: 5,
+            area: function () {
+                return 3.14 * this.r * this.r;
+            }
+        };
 
+        $scope.len = function () {
+            return 2 * 3.14 * $scope.circle.r;
+        };
+
+
+        $scope.$watch("r", function (to, from) {
+           // code
+        });
     });
 
     app.directive("game", function () {

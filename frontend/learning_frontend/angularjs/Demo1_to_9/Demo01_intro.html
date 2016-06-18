@@ -35,6 +35,12 @@
 
     <time datetime="2011-7-11T0:35:00"> 凌晨0点35分 </time>
     <meter value="40" min="0" max="100"></meter>
+
+    <select>
+        <option onchange="func1(this)">opt1</option>
+        <option onchange="func1(this)">opt2</option>
+        <option onchange="func1(this)">opt3</option>
+    </select>
 </div>
 
 
@@ -47,6 +53,10 @@
         alert(e.html());
         $scope.name = 'test';
         $scope.info = {title: "angularjs", price : 10};
+    }
+
+    function func1() {
+        alert("hello world");
     }
 </script>
 

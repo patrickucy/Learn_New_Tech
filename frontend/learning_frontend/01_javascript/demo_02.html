@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Demo02</title>
+</head>
+<body>
+
+<h2>1</h2>
+<button onclick="readReport(this)"> Read Report</button>
+
+<h2>2</h2>
+<div id="d1">list</div>
+<div id="d2" onclick="toggle(this)">&lt; &lt;</div>
+<div id="d3">content</div>
+<script>
+    document.getElementById('d1').style.display = 'block';
+
+    function readReport(obj) {
+        console.log(obj.textContent);
+        console.log(obj.innerHTML);
+        console.log(obj.innerText);
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="../angularjs/lib/bootstrap/css/bootstrap.min.css">
+    <script src="../angularjs/lib/jquery.js"></script>
+    <script src="../angularjs/lib/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../angularjs/lib/angular.min.js"></script>
+
+    <title>Demo05</title>
+
+</head>
+<body>
+
+
+<div id="msg">Hello World</div>
+
+<button class="btn btn-default" id="red" onclick="changeColor('red')">Red</button>
+<button class="btn btn-default" id="green" onclick="changeColor('green')">Green</button>
+<button class="btn btn-default" id="blue" onclick="changeColor('blue')">Blue</button>
+
+
+<script>
+
+    function changeColor(className) {
+        var div = document.getElementById('msg');
+        // 方法1  // 这个方法IE8 以下是不支持的,不过后面用jquery就可以解决这个兼容性问题
+//        div.setAttribute('class', className);
+
+        // 方法2  // 这个方法就不会存在兼容性问题, 不过你也看到了就是很麻烦
+        var attr = document.createAttribute('class');
+        attr.value = className;
+        div.setAttributeNode(attr);
+
+    }
+
+</script>
+</body>
+</html>

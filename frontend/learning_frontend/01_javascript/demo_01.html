@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Demo_01</title>
+</head>
+<body>
+<h1>this is demo 01</h1>
+<script>
+
+    console.log('nodeType/nodeName/nodeValue');
+    var node0 = document;
+    console.log('nodeName: ' + node0.nodeName);
+    console.log('nodeValue: ' + node0.nodeValue);
+    console.log('nodeType: ' + node0.nodeType);
+    console.log('firstChild: ' + document.firstChild.nodeName);
+    console.log('firstChild: ' + document.firstChild.innerHTML);
+
+    for(var i in document.firstChild.childNodes){
+        console.log(i);
+    }
+
+    console.log(document.firstChild.childNodes.length);
+
+</script>
+</body>
+</html>

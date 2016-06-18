@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="../angularjs/lib/bootstrap/css/bootstrap.min.css">
+    <script src="../angularjs/lib/jquery.js"></script>
+    <script src="../angularjs/lib/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../angularjs/lib/angular.min.js"></script>
+
+    <title>Demo07</title>
+
+    <style>
+        .tab {
+            width: 150px;
+            height: 60px;
+            border: 1px solid #aaa;
+            border-bottom: none;
+            float: left;
+            text-align: center;
+            line-height: 60px;
+            cursor: pointer;
+        }
+
+        #tab0, #page0 {
+            background: #faa;
+        }
+
+        #tab1, #page1 {
+            background: #afa;
+        }
+
+        #tab2, #page2 {
+            background: #aaf;
+        }
+
+        .page_container {
+            position: relative;
+            clear: both;
+        }
+
+        .page {
+            position: absolute;
+            width: 500px;
+            height: 100px;
+            border: 1px solid #aaa;
+            top: 120px;
+            left: 0;
+        }
+
+        .topPage {
+            z-index: 1;
+        }
+
+    </style>
+</head>
+<body>
+
+<h2>多标签页面效果</h2>
+<div id="tab0" class="tab" onclick="showPage(0)">10 dollar</div>
+<div id="tab1" class="tab" onclick="showPage(1)">20 dollar</div>
+<div id="tab2" class="tab" onclick="showPage(2)">30 dollar</div>
+
+<div class="pageContainer">
+    <div id="page0" class="page topPage">10 dollar detail</div>
+    <div id="page1" class="page">20 dollar detail</div>
+    <div id="page2" class="page">30 dollar detail</div>
+</div>
+
+
+<script>
+
+    function showPage(num) {
+        // 把其他的标签页的class 改为page
+        var container = document.getElementsByClassName('pageContainer')[0];
+        var divList = container.getElementsByTagName('div');
+        for (var i = 0; i < divList.length; i++) {
+            if (i != num) {
+                var div = divList[i];
+                if (div.getAttribute('class') != 'page') {
+                    var classNode = document.createAttribute('class');
+                    classNode.value = 'page';
+                    div.setAttributeNode(classNode);
+                }
+
+            }
+        }
+
+        // 把待显示的标签页的class 改成 page topPage
+        var pageDiv = document.getElementById('page'+num);
+        var classNode = document.createAttribute('class');
+        classNode.value = 'page topPage';
+        pageDiv.setAttributeNode(classNode);
+
+
+    }
+</script>
+</body>
+</html>

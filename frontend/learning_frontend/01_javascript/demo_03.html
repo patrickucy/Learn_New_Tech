@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="../angularjs/lib/bootstrap/css/bootstrap.min.css">
+    <script src="../angularjs/lib/jquery.js"></script>
+    <script src="../angularjs/lib/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../angularjs/lib/angular.min.js"></script>
+
+    <style>
+        .foreground{
+            z-index: 1;
+        }
+    </style>
+
+    <title>Demo03</title>
+</head>
+<body>
+
+<h1>Tabs</h1>
+<ul id="tab">
+    <li id="tab1" onclick="show(1)">$10 combo</li>
+    <li id="tab2" onclick="show(2)">$20 combo</li>
+    <li id="tab3" onclick="show(3)">$30 combo</li>
+</ul>
+<div id="container">
+    <div id="content1" class="foreground">
+        $10 is here <br/>
+        20 cents/min
+    </div>
+    <div id="content2">
+        $20 is here <br/>
+        30 cents/min
+    </div>
+    <div id="content3">
+        $40 is here <br/>
+        50 cents/min
+    </div>
+
+</div>
+
+<script>
+    var cur = 1;
+    function show(num) {
+        console.log('clicked!');
+        if (cur != num) {
+            var div1 = document.getElementById('content' + cur);
+            div1.removeAttribute('class');
+            var div2 = document.getElementById('content' + num);
+            div2.setAttribute('class', 'foreground');
+            cur = num;
+        }
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="../angularjs/lib/bootstrap/css/bootstrap.min.css">
+    <script src="../angularjs/lib/jquery.js"></script>
+    <script src="../angularjs/lib/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../angularjs/lib/angular.min.js"></script>
+
+    <title>Demo08</title>
+
+    <style>
+        .odd {
+            background: #aaf;
+        }
+
+        .even {
+            background: #ccf;
+        }
+
+    </style>
+</head>
+<body>
+
+<table id="empData" border="1" width="500px">
+    <thead>
+    <tr>
+        <th>编号</th>
+        <th>姓名</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>1001</td>
+        <td>tom</td>
+    </tr>
+    <tr>
+        <td>1002</td>
+        <td>jack</td>
+    </tr>
+    <tr>
+        <td>1003</td>
+        <td>andrew</td>
+    </tr>
+    <tr>
+        <td>1004</td>
+        <td>andy</td>
+    </tr>
+    </tbody>
+
+</table>
+
+
+<script>
+
+
+    var trList = document.querySelectorAll('#empData tbody tr');
+    console.log(trList);
+    for (var i = 0; i < trList.length; i++) {
+        var tr = trList[i];
+        if (i % 2 == 1) {
+            tr.setAttribute('class', 'odd');
+        }else{
+            tr.setAttribute('class',' even');
+        }
+    }
+
+</script>
+</body>
+</html>

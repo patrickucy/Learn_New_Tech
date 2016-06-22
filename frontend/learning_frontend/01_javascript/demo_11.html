@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="../angularjs/lib/bootstrap/css/bootstrap.min.css">
+    <script src="../angularjs/lib/jquery.js"></script>
+    <script src="../angularjs/lib/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../angularjs/lib/angular.min.js"></script>
+
+    <title>Demo11</title>
+
+
+</head>
+<body>
+
+<h2>Provinces</h2>
+
+<select id="provinces" onchange="changeCity(this.value)">
+    <option value="-1">---select---</option>
+</select>
+
+<select id="cities">
+    <option value="-1">---select---</option>
+</select>
+
+
+<script>
+    var ps = ['guangdong', 'zhejiang'];
+    var cs = [['guangzhou', 'shenzhen', 'zhuhai'], ['hangzhou', 'wenzhou', 'jiaxing']];
+
+    var fragment = document.createDocumentFragment();
+
+    for(var i=0; i<ps.length; i++){
+        var option = document.createElement('option');
+        option.setAttribute('value', i);
+        option.innerHTML = ps[i];
+        fragment.appendChild(option);
+    }
+
+    document.getElementById('provinces').appendChild(fragment);
+
+
+    function changeCity(prov){
+        if(prov == -1){
+            return;
+        }
+        var citySelect = document.getElementById('cities');
+        while(citySelect.children.length > 1){
+            citySelect.removeChild(citySelect.lastChild);
+        }
+
+        var cities = cs[prov];
+
+        var fragment = document.createDocumentFragment();
+        document.getElementById('cities').appendChild(fragment);
+
+        for(var i=0; i<cities.length; i++){
+            var option = document.createElement('option');
+            option.setAttribute('value', i);
+            option.innerHTML = cities[i];
+            fragment.appendChild(option);
+        }
+
+        document.getElementById('cities').appendChild(fragment);
+
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="../angularjs/lib/bootstrap/css/bootstrap.min.css">
+    <script src="../angularjs/lib/jquery.js"></script>
+    <script src="../angularjs/lib/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../angularjs/lib/angular.min.js"></script>
+
+    <title>Demo12</title>
+
+    <style>
+        select {
+            width: 100px;
+        }
+    </style>
+
+</head>
+<body>
+
+<h2>在线点菜</h2>
+<select size="8" multiple id="allDish">
+
+</select>
+
+<select size="8" multiple id="selectedDish">
+
+</select>
+
+<script>
+    var arr = ['yuxiangrousi', 'jingjiangrousi', 'gongbaojiding'];
+    var fragment = document.createDocumentFragment();
+
+    for (var i = 0; i < arr.length; i++) {
+        var option = document.createElement('option');
+        option.setAttribute('value', i);
+        option.innerHTML = arr[i];
+        option.setAttribute('ondblclick', 'chooseDish(this)');
+        fragment.appendChild(option);
+    }
+
+    document.getElementById('allDish').appendChild(fragment);
+
+
+    function chooseDish(option) {
+        var deleted = document.getElementById('allDish').removeChild(option);
+        document.getElementById('selectedDish').appendChild(deleted);
+    }
+</script>
+
+</body>
+</html>

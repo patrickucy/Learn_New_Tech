@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="../angularjs/lib/bootstrap/css/bootstrap.min.css">
+    <script src="../angularjs/lib/jquery.js"></script>
+    <script src="../angularjs/lib/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../angularjs/lib/angular.min.js"></script>
+
+    <title>Demo09</title>
+
+    <style>
+        ul li span {
+            cursor: pointer;
+        }
+
+        .disappear {
+            display: none;
+        }
+
+    </style>
+</head>
+<body>
+
+
+<ul>
+    <li>
+        <span onclick="toggle(this)">部门管理</span>
+        <ul>
+            <li>添加部门</li>
+            <li>删除部门</li>
+            <li>浏览部门</li>
+        </ul>
+    </li>
+    <li>
+        <span onclick="toggle(this)">员工管理</span>
+        <ul class="disappear">
+            <li>添加员工</li>
+            <li>删除员工</li>
+            <li>浏览员工</li>
+        </ul>
+    </li>
+    <li>
+        <span onclick="toggle(this)">考勤管理</span>
+        <ul class="disappear">
+            <li>添加考勤</li>
+            <li>删除考勤</li>
+            <li>浏览考勤</li>
+        </ul>
+    </li>
+
+</ul>
+
+
+<script>
+
+    function toggle(span) {
+
+        // 让其他的已显示的span ul 隐藏起来
+        var ulList = document.querySelectorAll('ul li ul');
+        for (var i = 0; i < ulList.length; i++) {
+            var ul = ulList[i];
+            if (!ul.hasAttribute('class')) {
+                ul.setAttribute('class', 'disappear');
+            }
+        }
+
+
+        // 这里记得用元素节点,不要用节点, 注意旧的浏览器是不支持的
+        var ul = span.nextElementSibling;
+        if (ul.hasAttribute('class')) {
+            ul.removeAttribute('class');
+        } else {
+            ul.setAttribute('class', 'disappear');
+        }
+    }
+
+</script>
+
+</body>
+</html>
